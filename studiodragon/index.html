@@ -1,0 +1,445 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <!-- <meta name="description" content="아시아의 콘텐츠와 라이프스타일을 선도하는 트렌드 리더, 스튜디오 드래곤의 홈페이지에 오신 것을 환영합니다." />
+  <meta name="keywords" content="스튜디오 드래곤, CJ, CJ E&M, 스튜디오, 드라마, 드라마제작사, 아시아, 콘텐츠, 라이프스타일, 트렌드리더, STUDIO DRAGON, 회사소개, 사업분야, 인재채용, 직무소개, 포트폴리오, 윤리경영, IR, IR 정보, CJ 스튜디오드래곤, 사업분야, Global 드라마, 채용정보, 보도자료" />
+  <meta name="author" content="(주)스튜디오드래곤" /> 
+  <meta name="apple-mobile-web-app-title" content="STUDIO DRAGON" />
+  <meta property="og:title" content="STUDIO DRAGON" />
+  <meta property="og:description" content="아시아의 콘텐츠와 라이프스타일을 선도하는 트렌드 리더, 스튜디오 드래곤의 홈페이지에 오신 것을 환영합니다." />
+  <meta property="og:url" content="http://www.studiodragon.net" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="/img/thumbnail.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="STUDIO DRAGON" /> -->
+
+  <title>스튜디오 드래곤</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="/css/common.css" />
+  <link rel="stylesheet" type="text/css" href="/css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen and (min-width: 1281px)" />
+  <link rel="stylesheet" type="text/css" href="/css/style_mobile.css" media="screen and (max-width: 1280px)" />
+
+  <script src="/js/jquery_3.5.1.min.js"></script>
+  <script src="/js/slick.min.js"></script>
+  <script src="/js/gsap/gsap.min.js"></script>
+  <script src="/js/gsap/scrollTrigger.min.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/script_main.js"></script>
+
+  <!-- ScrollMagic -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.js"></script> -->
+  <!-- GSAP : GSAP 기능 대부분 포함된 js파일 -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+  <!--GSAP animation plugin should be placed after ScrollMagic! : jquery선택자와 오브젝트 사용 + jquery.animate() 사용하기 위한 js파일 -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script> -->
+</head>
+
+<body class="main">
+<div id="wrapper">
+  <!-- skipNav -->
+  <div id="skipNav">
+    <a href="#container">본문 바로가기</a>
+    <a href="#gnb">주메뉴 바로가기</a>
+  </div>
+  <!-- //skipNav -->
+
+  <!-- js: 메인비주얼 영역 넘어가면, #header.down | pc: 메뉴 열리면, #header.open -->
+  <header id="header" class="pf">
+    <h1 class="pa"><a href="/index.html" class="db"><span class="txt_blind">스튜디오 드래곤 로고</span></a></h1>
+    <!-- js: mobile: 햄버거 버튼 누르면 네비 열리게, .navi_area.open | mobile: 기기 뷰포트 방향 세로일 때, 네비 뒷 배경 어두워지게 -->
+    <button class="btn_gnb_toggle mobile pa"><span class="txt_blind">메뉴 열기/닫기</span></button>
+    <div class="navi_area">
+      <nav id="gnb" class="pa">
+        <h2 class="txt_blind">주메뉴</h2>
+          <ul class="gnb_depth1 col">
+            <li data-menu="about">
+              <a href="#">ABOUT<span class="txt_blind mobile">하위 메뉴 열기/닫기</span></a>
+              <ul class="gnb_depth2">
+                <li data-menu="company"><a href="#">ABOUT US</a></li>
+                <li data-menu="history"><a href="/page/about_history.html">COMPANY HISTORY</a></li>
+                <li data-menu="ethical"><a href="#">ETHICAL MANAGEMENT</a></li>
+                <li data-menu="partner"><a href="#">PARTNERS</a></li>
+                <li data-menu="contact"><a href="/page/about_contact.html">CONTACT US</a></li>
+              </ul>
+            </li>
+            <li data-menu="works">
+              <a href="/page//works_portfolio.html">WORKS<span class="txt_blind mobile">하위 메뉴 열기/닫기</span></a>
+              <ul class="gnb_depth2">
+                <li data-menu="portfolio"><a href="/page/works_portfolio.html">SHOWS</a></li>
+              </ul>
+            </li>
+            <li data-menu="career">
+              <a href="#">CAREERS<span class="txt_blind mobile">하위 메뉴 열기/닫기</span></a>
+              <ul class="gnb_depth2">
+                <li data-menu="talent"><a href="#">RECRUITMENT</a></li>
+                <li data-menu="recruit"><a href="#">FEATURED JOBS</a></li>
+              </ul>
+            </li>
+            <li data-menu="newsroom">
+              <a href="/page/newsroom_notice.html">NEWSROOM<span class="txt_blind mobile">하위 메뉴 열기/닫기</span></a>
+              <ul class="gnb_depth2">
+                <li data-menu="notice"><a href="/page/newsroom_notice.html">NOTICE</a></li>
+                <li data-menu="news"><a href="#">PRESS RELEASES</a></li>
+              </ul>
+            </li>
+            <li data-menu="ir">
+              <a href="#">IR<span class="txt_blind mobile">하위 메뉴 열기/닫기</span></a>
+              <ul class="gnb_depth2">
+                <li data-menu="activities"><a href="#">IR ACTIVITES & MATERIALS</a></li>
+                <li data-menu="disclosure"><a href="#">DISCLOSURE</a></li>
+                <li data-menu="notice"><a href="#">PUBLIC NOTICE</a></li>
+                <li data-menu="stock"><a href="#">STOCK INFORMATION</a></li>
+                <li data-menu="finance"><a href="#">FINANCIAL INFORMATION</a></li>
+                <li data-menu="governance"><a href="#">CORPORATE GOVERNANCE</a></li>
+              </ul>
+            </li>
+          </ul>
+      </nav>
+      <!-- js: 언어 선택되면 li.on -->
+      <ul class="lang_list pa col">
+        <li class="on"><a href="#">KOR</a></li>
+        <li><a href="#">ENG</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <div id="container">
+    <!-- js: 메인비주얼 화면 높이에 맞춰 설정 -->
+    <section id="home" class="main_visual pr oh">
+      <h2 class="txt_blind">HOME</h2>
+      <video autoplay preload="auto" loop muted class="pc_only">
+        <source src="/img/main/bg_visual.mp4" type="video/mp4" />
+      </video>
+      <div class="txt_center">
+        <p class="bg_frame_light"></p>
+        <p class="bg_frame_light"></p>
+        <strong class="tit db">WE CREATE NEW CULTURE</strong>
+        <p>
+          아시아의 콘텐츠와 라이프스타일을 선도하는 <br/>트렌드 리더로서 늘 
+          <br/>새로운 시도로 <br/>시청자들에게 보는 즐거움을 선사합니다.
+        </p>
+      </div>
+      <p class="ico_scroll pa"><span class="txt_blind">Scroll Down</span></p>
+    </section>
+
+    <section id="onAir" class="main_content pr">
+      <h2 class="txt_tit">ON AIR</h2>
+      <p class="bg_frame_dark"></p>
+      <!-- js: ul 너비가 윈도우 창 너비보다 길면 슬라이드 생성 -->
+      <ul class="pr">
+        <li>
+          <a href="#">
+            <img src="/img/main/img_onair_luca.jpg" alt="tvN 월화드라마 '루카 : 더 비기닝' 포스터" />
+          </a>
+          <p class="txt_area">
+            <strong class="tit">루카 : 더 비기닝</strong>
+            <span class="desc">tvN(월, 화) 오후 9:00</span>
+          </p>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/img/main/img_onair_vincenzo.jpg" alt="tvN 주말드라마 '빈센조' 포스터" />
+          </a>
+          <p class="txt_area">
+            <strong class="tit">빈센조</strong>
+            <span class="desc">tvN(토, 일) 오후 9:00</span>
+          </p>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/img/main/img_onair_times.jpg" alt="tvN 월화드라마 '타임즈' 포스터" />
+          </a>
+          <p class="txt_area">
+            <strong class="tit">타임즈</strong>
+            <span class="desc">OCN(토, 일) 오후 10:30</span>
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="works" class="main_content pr">
+      <h2 class="txt_tit">WORKS</h2>
+      <p class="bg_frame_dark"></p>
+      <div class="inner oh">
+        <ul class="left_area fl">
+          <li class="fr">
+            <a href="#">
+              <img src="/img/main/img_works_l1_guardian.jpg" alt="드라마 '도깨비' 포스터" />
+              <p class="detail bg_dimed pc_only">
+                <strong class="txt_center">도깨비</strong>
+                <span class="txt_blind">작품 상세 내용 보기</span>
+              </p>
+            </a>
+            <span class="txt_tit">도깨비</span>
+          </li>
+          <li class="fr">
+            <a href="#">
+              <img src="/img/main/img_works_l2_clown.jpg" alt="드라마 '왕이된 남자' 포스터" />
+              <p class="detail bg_dimed pc_only">
+                <strong class="txt_center">왕이 된 남자</strong>
+                <span class="txt_blind">작품 상세 내용 보기</span>
+              </p>
+            </a>
+            <span class="txt_tit">왕이 된 남자</span>
+          </li>
+        </ul>
+        <ul class="right_area fr">
+          <li class="fl">
+            <a href="#">
+              <img src="/img/main/img_works_r1_stranger.jpg" alt="드라마 '비밀의 숲' 포스터" />
+              <p class="detail bg_dimed pc_only">
+                <strong class="txt_center">비밀의 숲</strong>
+                <span class="txt_blind">작품 상세 내용 보기</span>
+              </p>
+            </a>
+            <span class="txt_tit">비밀의 숲</span>
+          </li>
+          <li class="fl">
+            <a href="#">
+              <img src="/img/main/img_works_r2_mrsunshine.jpg" alt="드라마 '미스터 션샤인' 포스터" />
+              <p class="detail bg_dimed pc_only">
+                <strong class="txt_center">미스터 션샤인</strong>
+                <span class="txt_blind">작품 상세 내용 보기</span>
+              </p>
+            </a>
+            <span class="txt_tit">미스터 션샤인</span>
+          </li>
+          <li class="fl">
+            <a href="#">
+              <img src="/img/main/img_works_r3_mars.jpg" alt="드라마 '라이프 온 마스' 포스터" />
+              <p class="detail bg_dimed pc_only">
+                <strong class="txt_center">라이프 온 마스</strong>
+                <span class="txt_blind">작품 상세 내용 보기</span>
+              </p>
+            </a>
+            <span class="txt_tit">라이프 온 마스</span>
+          </li>
+        </ul>
+      </div>
+      <a href="/page/works_portfolio.html" class="btn_more db">VIEW MORE</a>
+    </section>
+
+    <section id="issue" class="main_content pr oh">
+      <h2 class="txt_blind">issue</h2>
+      <p class="bg_frame_light"></p>
+      <a href="#" class="db">
+        <p class="txt_center">
+          <span class="tit db">감독은 있는데 대본이 없다.</span>
+          <span>작가를 꿈꾸는 이들에게 열려 있는 창작 공간과 기회를 제공합니다.</span>
+        </p>
+      </a>
+    </section>
+
+    <section id="news" class="main_content">
+      <h2 class="txt_tit">NEWS</h2>
+      <table class="board_list inner">
+        <caption class="txt_blind">뉴스 목록</caption>
+        <colgroup>
+          <col/>
+          <col class="txt_date" />
+        </colgroup>
+        <thead class="txt_blind">
+          <tr>
+            <th>제목</th>
+            <th>작성일</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="txt_tit"><a href="#">스튜디오드래곤 싱가포르관광청과 해외촬영 지원 MOU 체결</a></td>
+            <td class="txt_date">2020.12.09</td>
+          </tr>
+          <tr>
+            <td class="txt_tit"><a href="#">&lt;사랑의 불시착&gt;, &lt;방법&gt; 싱가포르 2020 AACA 수상 영예!</a></td>
+            <td class="txt_date">2020.12.07</td>
+          </tr>
+          <tr>
+            <td class="txt_tit"><a href="#">스튜디오드래곤作 ‘사이코지만 괜찮아’ 뉴욕타임스 인터내셔널 TV쇼 TOP10 선정!</a></td>
+            <td class="txt_date">2020.12.04</td>
+          </tr>
+          <tr>
+            <td class="txt_tit"><a href="#">넷플릭스 오리지널 시리즈 &lt;나 홀로 그대&gt; SF어워드 영상부문 우수상 수상</a></td>
+            <td class="txt_date">2020.11.09</td>
+          </tr>
+          <tr>
+            <td class="txt_tit"><a href="#">스튜디오드래곤  ‘2020 한국IR대상’ 최우수상 수상! 상장 3년만에 2년 연속 수상 영광</a></td>
+            <td class="txt_date">2020.10.22</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="#" class="btn_more db">VIEW MORE</a>
+    </section>
+
+    <!-- js: 화면 높이의 1/2 지나면 인디케이터 다음으로 변경되게 -->
+    <aside id="pageNav" class="pf">
+      <ul class="indicator pa">
+        <!-- js: 인디케이터 메뉴 누르면, li.on | 부드럽게 이동되게 -->
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#onAir">ON AIR</a></li>
+        <li><a href="#works">WORKS</a></li>
+        <li><a href="#issue">ISSUE</a></li>
+        <li><a href="#news">NEWS</a></li>
+      </ul>
+    </aside>
+  </div>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer id="footer" class="pr">
+    <div class="ft_util">
+      <div class="inner">
+        <div class="family pa">
+          <!-- js: 버튼 눌리면 ul 나오게 -->
+          <button class="btn_link_toggle">Family Site<span class="txt_blind">더보기/닫기</span></button>
+          <ul class="pa">
+            <li><a href="#">CJ 그룹</a></li>
+            <li><a href="#">CJ ENM</a></li>
+            <li><a href="#">문화창고</a></li>
+          </ul>
+        </div>
+        <ul class="info_list col">
+          <li><a href="#">법적고지</a></li>
+          <li><a href="#">이메일 무단수집 거부</a></li>
+          <li><a href="#">사이버 감사실</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li><a href="#">사이트맵</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft_company inner">
+      <a href="/index.html" class="ft_logo fl"><img src="/img/common/img_ft_logo.png" alt="하단 스튜디오 드래곤 로고" /></a>
+      <address>
+        <p>서울특별시 마포구 매봉산로 75, 17층 스튜디오 드래곤 주식회사</p>
+        <span>FAX : +82 2-2146-0988</span>
+        <span>사업자등록번호 : 747-81-00388</span>
+        <span>대표자 : 강철구, 김영규</span>
+      </address>
+      <p class="txt_copyright">©2017 <strong>STUDIO DRAGON Corp.</strong> All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- //footer -->
+</div>   
+
+<script>
+  'use strict';
+
+  resizeSlickFn($('#onAir > ul'));  //slick 셋팅
+  scrollTriggerFn();                //GSAP scrollTrigger 셋팅
+  noRepeatGSAPFn();                 //GSAP 애니메이션 셋팅
+
+  $(window).on('resize', function() {
+    resizeSlickFn($('#onAir > ul'));
+  });
+
+  //#onAir ul: slick 셋팅 함수
+  function resizeSlickFn($slider) {
+    var sliderWidth = 0, num = 3, marginLeft = 0;
+
+    $(window).outerWidth() > 768 ? marginLeft = 34 : marginLeft = 18;
+    sliderWidth = $slider.find('li:eq(1)').outerWidth(true) * num - marginLeft;
+    $slider.css({'max-width': sliderWidth + 'px'});
+    // console.log(num, $slider.find('li').length, sliderWidth, $slider.outerWidth(), $(window).innerWidth());
+
+    if($(window).innerWidth() <= sliderWidth) { 
+      $slider.not('.slick-initialized').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+        centerMode: true,
+        variableWidth: true,
+        arrows: true,
+        dots: false,
+        infinite: true
+      });
+      $slider.removeClass('col');
+    } else {
+      $slider.filter('.slick-initialized').slick('unslick');
+      $slider.find('li, a').removeAttr('tabindex role id aria-describedby');
+
+      $slider.addClass('col');
+    }
+  }
+  
+  //GSAP scrollTrigger 셋팅 함수
+  function scrollTriggerFn() {
+    //왼쪽에서 나타나게
+    var $selector1 = $('#onAir, #works, #news');
+    $selector1.each(function() {
+      $selector1 = $(this);
+      var timeLine1 = gsap.timeline({
+        scrollTrigger: {
+          trigger: $selector1,      //== triggerElement
+          start: 'top bottom',      //== triggerHook, duration, offset  //위에서 아래로 스크롤
+          end: '+=500',             //500만큼
+          // markers: true,         //trigger start/end 위치 보여줌
+          // scrub: true            //== setTween   //되감기(애니메이션 재사용) //smooth scrubbing
+          scrub: 0.3
+        }
+      });
+      timeLine1.addLabel('sameTime');
+      timeLine1.from($selector1.find('h2.txt_tit'), {autoAlpha: 0, x: -60}, 'sameTime');
+      timeLine1.from($selector1.find('.bg_frame_dark'), {autoAlpha: 0}, 'sameTime');
+    });
+
+    //위로 나타나게
+    var $selector2 = $('#issue');
+    var timeLine2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: $selector2,
+        start: 'top bottom-=50',
+        end: 'bottom center',
+        // start: 'top bottom',
+        // end: '+=350',
+        scrub: 0.3
+      }
+    });
+    timeLine2.from($selector2.find('.txt_center'), {autoAlpha: 0, y: 60, ease: 'Power1.easeOut'});
+
+    //아래로 사라지게
+    var $selector2 = $('#home');
+    var timeLine2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: $selector2,
+        start: 'center center',
+        scrub: 0.3
+      }
+    });
+    timeLine2.addLabel('sameTime');
+    timeLine2.to($selector2.find('.txt_center > .tit'), {autoAlpha: 0, scale: 0.7}, 'sameTime');
+    timeLine2.to($selector2.find('.txt_center > p'), {autoAlpha: 0, y: 40}, 'sameTime');
+
+    // window.addEventListener('load', function(){
+    //   gsap.registerPlugin(ScrollTrigger);
+    //   ScrollTrigger.refresh();
+    // });
+    
+    $(window).on('load', function() {
+      ScrollTrigger.refresh();
+    });
+  }
+
+  //GSAP 애니메이션 셋팅 함수
+  function noRepeatGSAPFn() {
+    var timeLine = gsap.timeline();
+
+    if($(window).scrollTop() <= 100) {
+      timeLine.from('#home .bg_frame_light', {autoAlpha: 0, scale: 0.2, duration: 1})
+        .from('#home .txt_center > .tit', {autoAlpha: 0, y: 20})
+        .from('#home .txt_center > .tit + p', {autoAlpha: 0, y: 20})
+        .from('#home .ico_scroll', {autoAlpha: 0, y: -20});
+    }
+    $(window).on('scroll', function() {
+      timeLine.progress(1);  //스크롤 발생시 애니메이션 바로 완료
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "story": [
+    {
+      "category": "토익스토리",
+      "tit": "토익탐정이 알려주는 정답 찾기",
+      "detail": "'토익탐정 PART7 단일지문 독해",
+      "img": "img/img_story_01.jpg"
+    },
+    {
+      "category": "토익스토리",
+      "tit": "2021년 취업을 준비한다면?",
+      "detail": "토익X피플 취업컨설턴트가 알려주는 2021년 취업 전략",
+      "img": "img/img_story_02.jpg"
+    },
+    {
+      "category": "토익스토리",
+      "tit": "실제 기출 문제 수록! 토스 체험 앱",
+      "detail": "토익스피킹 체험APP 2020년 하반기 실제 기출문제 업데이트",
+      "img": "img/img_story_03.jpg"
+    },
+    {
+      "category": "토익스토리",
+      "tit": "토익스피킹, 이렇게 활용했다",
+      "detail": "-토익스피킹 성공수기- 장학금부터 공기업 인턴까지 다양한 기회 열어준 토익스피킹",
+      "img": "img/img_story_04.jpg"
+    },
+    {
+      "category": "토익스토리",
+      "tit": "재택근무 완벽 매뉴얼",
+      "detail": "'직문즉답' 재택근무 완벽 매뉴얼",
+      "img": "img/img_story_05.jpg"
+    },
+    {
+      "category": "청춘싸롱",
+      "tit": "영어 하루 한마디",
+      "detail": "영어하루한마디 우리의 차이점을 없애야 해.",
+      "img": "img/img_story_06.jpg"
+    },
+    {
+      "category": "청춘싸롱",
+      "tit": "습관중국어",
+      "detail": "#하루3분 #구먹중 #문어를 구어먹다 오늘의 한마디 완전 엄청 좋아할 거야! #말하는 중국어 #회화",
+      "img": "img/img_story_07.jpg"
+    },
+    {
+      "category": "청춘싸롱",
+      "tit": "토익보카",
+      "detail": "시험보기 30분전 흝고가기! 매년 꼭 출제되는 PART1 어휘",
+      "img": "img/img_story_08.jpg"
+    }
+  ]
+}
