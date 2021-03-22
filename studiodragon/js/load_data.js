@@ -20,7 +20,7 @@ $(function() {
 
   function loadDataFn() {
     $.ajax({
-      url: 'js/data.json',
+      url: '../js/data.json',
       dataType: 'json',
       success: function(result) { //json파일 담김
         // console.log(result);
