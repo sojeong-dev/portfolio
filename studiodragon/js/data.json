@@ -6,7 +6,7 @@
       "director": "한동화",
       "writer": "이은미",
       "mainCast": "송강, 박인환, 나문희",
-      "img": "img/sub/img_works_naviella.jpg"      
+      "img": "../img/sub/img_works_naviella.jpg"      
     },
     {
       "state": "방영",
@@ -14,7 +14,7 @@
       "director": "윤종호",
       "writer": "이새봄, 안혜진",
       "mainCast": "이서진, 이주영, 김영철, 문정희",
-      "img": "img/sub/img_works_times.jpg"      
+      "img": "../img/sub/img_works_times.jpg"      
     },
     {
       "state": "방영",
@@ -22,7 +22,7 @@
       "director": "김희원",
       "writer": "박재범",
       "mainCast": "송중기, 전여빈, 옥택연, 유재명, 김여진, 곽동연, 조한철",
-      "img": "img/sub/img_works_vincenzo.jpg"      
+      "img": "../img/sub/img_works_vincenzo.jpg"      
     },
     {
       "state": "종영",
@@ -30,7 +30,7 @@
       "director": "김홍선",
       "writer": "천성일",
       "mainCast": "김래원, 이다희, 김성오, 김상호",
-      "img": "img/sub/img_works_luca.jpg"      
+      "img": "../img/sub/img_works_luca.jpg"      
     },
     {
       "state": "OTT",
@@ -38,7 +38,7 @@
       "director": "이응복, 장영우",
       "writer": "홍소리, 김형민",
       "mainCast": "이진욱, 송강, 이시영",
-      "img": "img/sub/img_works_sweethome.jpg"      
+      "img": "../img/sub/img_works_sweethome.jpg"      
     },
     {
       "state": "종영",
@@ -46,7 +46,7 @@
       "director": "윤성식, 장양호",
       "writer": "박계옥, 촤이일",
       "mainCast": "신혜선, 김정현, 배종옥, 김태우",
-      "img": "img/sub/img_works_mrqueen.jpg"      
+      "img": "../img/sub/img_works_mrqueen.jpg"      
     },
     {
       "state": "종영",
@@ -54,7 +54,7 @@
       "director": "김상협",
       "writer": "이시은",
       "mainCast": "문가영, 차은우, 박유나, 황인섭",
-      "img": "img/sub/img_works_truebeauty.jpg"      
+      "img": "../img/sub/img_works_truebeauty.jpg"      
     },
     {
       "state": "종영",
@@ -62,7 +62,7 @@
       "director": "김정현",
       "writer": "신유담",
       "mainCast": "남궁민, 김설현, 이청아",
-      "img": "img/sub/img_works_awaken.jpg"      
+      "img": "../img/sub/img_works_awaken.jpg"      
     },
 
     {
@@ -71,7 +71,7 @@
       "director": "유선동",
       "writer": "여지나",
       "mainCast": "조병규, 유준상, 김세정, 염혜란",
-      "img": "img/sub/img_works_uncannycounter.jpg"      
+      "img": "../img/sub/img_works_uncannycounter.jpg"      
     },
     {
       "state": "종영",
@@ -79,7 +79,7 @@
       "director": "오충환",
       "writer": "박혜련",
       "mainCast": "배수지, 남주혁, 김선호, 강한나",
-      "img": "img/sub/img_works_startup.jpg"      
+      "img": "../img/sub/img_works_startup.jpg"      
     },
     {
       "state": "종영",
@@ -87,7 +87,7 @@
       "director": "강신효, 조남형",
       "writer": "한우리",
       "mainCast": "이동욱, 조보아, 김범",
-      "img": "img/sub/img_works_ninetailed.jpg"      
+      "img": "../img/sub/img_works_ninetailed.jpg"      
     },
     {
       "state": "종영",
@@ -95,7 +95,7 @@
       "director": "안길호",
       "writer": "하명희",
       "mainCast": "박보검, 박소담, 변우석",
-      "img": "img/sub/img_works_youth.jpg"      
+      "img": "../img/sub/img_works_youth.jpg"      
     },
     {
       "state": "종영",
@@ -103,7 +103,7 @@
       "director": "민연홍",
       "writer": "반기리, 정소영",
       "mainCast": "고수, 허준호, 안소희",
-      "img": "img/sub/img_works_missing.jpg"      
+      "img": "../img/sub/img_works_missing.jpg"      
     },
     {
       "state": "종영",
@@ -111,7 +111,7 @@
       "director": "박현석",
       "writer": "이수연",
       "mainCast": "조승우, 배두나",
-      "img": "img/sub/img_works_stranger2.jpg"      
+      "img": "../img/sub/img_works_stranger2.jpg"      
     },
     {
       "state": "종영",
@@ -119,7 +119,7 @@
       "director": "김철규",
       "writer": "유정희",
       "mainCast": "이준기, 문채원, 장희진",
-      "img": "img/sub/img_works_flowerevil.jpg"      
+      "img": "../img/sub/img_works_flowerevil.jpg"      
     },
     {
       "state": "종영",
@@ -127,7 +127,7 @@
       "director": "류승진",
       "writer": "박가연",
       "mainCast": "윤시윤, 경수진",
-      "img": "img/sub/img_works_train.jpg"      
+      "img": "../img/sub/img_works_train.jpg"      
     },
     {
       "state": "종영",
@@ -135,7 +135,7 @@
       "director": "박신우",
       "writer": "조용",
       "mainCast": "김수현, 서예지, 오정세",
-      "img": "img/sub/img_works_psycho.jpg"      
+      "img": "../img/sub/img_works_psycho.jpg"      
     },
     {
       "state": "종영",
@@ -143,7 +143,7 @@
       "director": "권영일",
       "writer": "김은정",
       "mainCast": "한예리, 김지석, 추자연, 정진영, 원미경",
-      "img": "img/sub/img_works_unfamiliarfamily.jpg"      
+      "img": "../img/sub/img_works_unfamiliarfamily.jpg"      
     },
     {
       "state": "OTT",
@@ -151,7 +151,7 @@
       "director": "이상엽",
       "writer": "류용재",
       "mainCast": "윤현민, 고성희",
-      "img": "img/sub/img_works_myhololove.jpg"      
+      "img": "../img/sub/img_works_myhololove.jpg"      
     },
     {
       "state": "OTT",
@@ -159,7 +159,7 @@
       "director": "이나정",
       "writer": "이아연, 서보라",
       "mainCast": "김소현, 정가람, 송강, 고민시",
-      "img": "img/sub/img_works_lovealarm.jpg"      
+      "img": "../img/sub/img_works_lovealarm.jpg"      
     }
     
   ]
