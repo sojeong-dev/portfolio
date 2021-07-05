@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <!-- <meta name="description" content="아시아의 콘텐츠와 라이프스타일을 선도하는 트렌드 리더, 스튜디오 드래곤의 홈페이지에 오신 것을 환영합니다." />
+  <meta name="description" content="아시아의 콘텐츠와 라이프스타일을 선도하는 트렌드 리더, 스튜디오 드래곤의 홈페이지에 오신 것을 환영합니다." />
   <meta name="keywords" content="스튜디오 드래곤, CJ, CJ E&M, 스튜디오, 드라마, 드라마제작사, 아시아, 콘텐츠, 라이프스타일, 트렌드리더, STUDIO DRAGON, 회사소개, 사업분야, 인재채용, 직무소개, 포트폴리오, 윤리경영, IR, IR 정보, CJ 스튜디오드래곤, 사업분야, Global 드라마, 채용정보, 보도자료" />
   <meta name="author" content="(주)스튜디오드래곤" /> 
   <meta name="apple-mobile-web-app-title" content="STUDIO DRAGON" />
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="ko_KR" />
   <meta property="og:image" content="./img/thumbnail.jpg" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="STUDIO DRAGON" /> -->
+  <meta property="og:site_name" content="STUDIO DRAGON" />
 
   <title>스튜디오 드래곤</title>
   <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
@@ -29,14 +29,6 @@
   <script src="./js/gsap/scrollTrigger.min.js"></script>
   <script src="./js/common.js"></script>
   <script src="./js/script_main.js"></script>
-
-  <!-- ScrollMagic -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script> -->
-  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.js"></script> -->
-  <!-- GSAP : GSAP 기능 대부분 포함된 js파일 -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
-  <!--GSAP animation plugin should be placed after ScrollMagic! : jquery선택자와 오브젝트 사용 + jquery.animate() 사용하기 위한 js파일 -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script> -->
 </head>
 
 <body class="main">
@@ -49,28 +41,28 @@
   <!-- //skipNav -->
 
   <!-- js: 메인비주얼 영역 넘어가면, #header.down | pc: 메뉴 열리면, #header.open -->
-  <header id="header" class="pf">
-    <h1 class="pa"><a href="./index.html" class="db"><span class="txt_blind">스튜디오 드래곤 로고</span></a></h1>
+  <header id="header">
+    <h1><a href="./index.html" class="ok"><span class="txt_blind">스튜디오 드래곤 로고</span></a></h1>
     <!-- js: mobile: 햄버거 버튼 누르면 네비 열리게, .navi_area.open | mobile: 기기 뷰포트 방향 세로일 때, 네비 뒷 배경 어두워지게 -->
-    <button class="btn_gnb_toggle mobile pa"><span class="txt_blind">메뉴 열기/닫기</span></button>
+    <button class="btn_gnb_toggle mobile"><span class="txt_blind">메뉴 열기/닫기</span></button>
     <div class="navi_area">
-      <nav id="gnb" class="pa">
+      <nav id="gnb">
         <h2 class="txt_blind">주메뉴</h2>
           <ul class="gnb_depth1 col">
             <li data-menu="about">
               <a href="#">ABOUT<span class="txt_blind mobile">하위 메뉴 열기/닫기</span></a>
               <ul class="gnb_depth2">
                 <li data-menu="company"><a href="#">ABOUT US</a></li>
-                <li data-menu="history"><a href="./page/about_history.html">COMPANY HISTORY</a></li>
+                <li data-menu="history"><a href="./page/about_history.html" class="ok">COMPANY HISTORY</a></li>
                 <li data-menu="ethical"><a href="#">ETHICAL MANAGEMENT</a></li>
                 <li data-menu="partner"><a href="#">PARTNERS</a></li>
-                <li data-menu="contact"><a href="./page/about_contact.html">CONTACT US</a></li>
+                <li data-menu="contact"><a href="./page/about_contact.html" class="ok">CONTACT US</a></li>
               </ul>
             </li>
             <li data-menu="works">
-              <a href="./page/works_portfolio.html">WORKS<span class="txt_blind mobile">하위 메뉴 열기/닫기</span></a>
+              <a href="./page/works_portfolio.html" class="ok">WORKS<span class="txt_blind mobile">하위 메뉴 열기/닫기</span></a>
               <ul class="gnb_depth2">
-                <li data-menu="portfolio"><a href="./page/works_portfolio.html">SHOWS</a></li>
+                <li data-menu="portfolio"><a href="./page/works_portfolio.html" class="ok">SHOWS</a></li>
               </ul>
             </li>
             <li data-menu="career">
@@ -81,9 +73,9 @@
               </ul>
             </li>
             <li data-menu="newsroom">
-              <a href="./page/newsroom_notice.html">NEWSROOM<span class="txt_blind mobile">하위 메뉴 열기/닫기</span></a>
+              <a href="./page/newsroom_notice.html" class="ok">NEWSROOM<span class="txt_blind mobile">하위 메뉴 열기/닫기</span></a>
               <ul class="gnb_depth2">
-                <li data-menu="notice"><a href="./page/newsroom_notice.html">NOTICE</a></li>
+                <li data-menu="notice"><a href="./page/newsroom_notice.html" class="ok">NOTICE</a></li>
                 <li data-menu="news"><a href="#">PRESS RELEASES</a></li>
               </ul>
             </li>
@@ -101,7 +93,7 @@
           </ul>
       </nav>
       <!-- js: 언어 선택되면 li.on -->
-      <ul class="lang_list pa col">
+      <ul class="lang_list col">
         <li class="on"><a href="#">KOR</a></li>
         <li><a href="#">ENG</a></li>
       </ul>
@@ -112,7 +104,7 @@
   <!-- container -->
   <div id="container">
     <!-- js: 메인비주얼 화면 높이에 맞춰 설정 -->
-    <section id="home" class="main_visual pr oh">
+    <section id="home" class="main_visual">
       <h2 class="txt_blind">HOME</h2>
       <video autoplay preload="auto" loop muted class="pc_only">
         <source src="./img/main/bg_visual.mp4" type="video/mp4" />
@@ -120,20 +112,20 @@
       <div class="txt_center">
         <p class="bg_frame_light"></p>
         <p class="bg_frame_light"></p>
-        <strong class="tit db">WE CREATE NEW CULTURE</strong>
+        <strong class="tit">WE CREATE NEW CULTURE</strong>
         <p>
           아시아의 콘텐츠와 라이프스타일을 선도하는 <br/>트렌드 리더로서 늘 
           <br/>새로운 시도로 <br/>시청자들에게 보는 즐거움을 선사합니다.
         </p>
       </div>
-      <p class="ico_scroll pa"><span class="txt_blind">Scroll Down</span></p>
+      <p class="ico_scroll"><span class="txt_blind">Scroll Down</span></p>
     </section>
 
-    <section id="onAir" class="main_content pr">
-      <h2 class="txt_tit">ON AIR</h2>
+    <section id="onAir" class="main_content">
+      <h2>ON AIR</h2>
       <p class="bg_frame_dark"></p>
       <!-- js: ul 너비가 윈도우 창 너비보다 길면 슬라이드 생성 -->
-      <ul class="pr">
+      <ul>
         <li>
           <a href="#">
             <img src="./img/main/img_onair_luca.jpg" alt="tvN 월화드라마 '루카 : 더 비기닝' 포스터" />
@@ -164,8 +156,8 @@
       </ul>
     </section>
 
-    <section id="works" class="main_content pr">
-      <h2 class="txt_tit">WORKS</h2>
+    <section id="works" class="main_content">
+      <h2>WORKS</h2>
       <p class="bg_frame_dark"></p>
       <div class="inner oh">
         <ul class="left_area fl">
@@ -223,22 +215,22 @@
           </li>
         </ul>
       </div>
-      <a href="./page/works_portfolio.html" class="btn_more db">VIEW MORE</a>
+      <a href="./page/works_portfolio.html" class="btn_more ok">VIEW MORE</a>
     </section>
 
-    <section id="issue" class="main_content pr oh">
+    <section id="issue" class="main_content">
       <h2 class="txt_blind">issue</h2>
       <p class="bg_frame_light"></p>
-      <a href="#" class="db">
+      <a href="#">
         <p class="txt_center">
-          <span class="tit db">감독은 있는데 대본이 없다.</span>
+          <span class="tit">감독은 있는데 대본이 없다.</span>
           <span>작가를 꿈꾸는 이들에게 열려 있는 창작 공간과 기회를 제공합니다.</span>
         </p>
       </a>
     </section>
 
     <section id="news" class="main_content">
-      <h2 class="txt_tit">NEWS</h2>
+      <h2>NEWS</h2>
       <table class="board_list inner">
         <caption class="txt_blind">뉴스 목록</caption>
         <colgroup>
@@ -274,12 +266,12 @@
           </tr>
         </tbody>
       </table>
-      <a href="#" class="btn_more db">VIEW MORE</a>
+      <a href="#" class="btn_more">VIEW MORE</a>
     </section>
 
     <!-- js: 화면 높이의 1/2 지나면 인디케이터 다음으로 변경되게 -->
-    <aside id="pageNav" class="pf">
-      <ul class="indicator pa">
+    <aside id="pageNav">
+      <ul class="indicator">
         <!-- js: 인디케이터 메뉴 누르면, li.on | 부드럽게 이동되게 -->
         <li><a href="#home">HOME</a></li>
         <li><a href="#onAir">ON AIR</a></li>
@@ -292,13 +284,13 @@
   <!-- //container -->
 
   <!-- footer -->
-  <footer id="footer" class="pr">
+  <footer id="footer">
     <div class="ft_util">
       <div class="inner">
-        <div class="family pa">
+        <div class="family">
           <!-- js: 버튼 눌리면 ul 나오게 -->
           <button class="btn_link_toggle">Family Site<span class="txt_blind">더보기/닫기</span></button>
-          <ul class="pa">
+          <ul>
             <li><a href="#">CJ 그룹</a></li>
             <li><a href="#">CJ ENM</a></li>
             <li><a href="#">문화창고</a></li>
@@ -338,7 +330,7 @@
     resizeSlickFn($('#onAir > ul'));
   });
 
-  //#onAir ul: slick 셋팅 함수
+  //onAir > ul: slick 셋팅 함수
   function resizeSlickFn($slider) {
     var sliderWidth = 0, num = 3, marginLeft = 0;
 
@@ -384,7 +376,7 @@
         }
       });
       timeLine1.addLabel('sameTime');
-      timeLine1.from($selector1.find('h2.txt_tit'), {autoAlpha: 0, x: -60}, 'sameTime');
+      timeLine1.from($selector1.find('h2'), {autoAlpha: 0, x: -60}, 'sameTime');
       timeLine1.from($selector1.find('.bg_frame_dark'), {autoAlpha: 0}, 'sameTime');
     });
 
@@ -414,11 +406,6 @@
     timeLine2.addLabel('sameTime');
     timeLine2.to($selector2.find('.txt_center > .tit'), {autoAlpha: 0, scale: 0.7}, 'sameTime');
     timeLine2.to($selector2.find('.txt_center > p'), {autoAlpha: 0, y: 40}, 'sameTime');
-
-    // window.addEventListener('load', function(){
-    //   gsap.registerPlugin(ScrollTrigger);
-    //   ScrollTrigger.refresh();
-    // });
     
     $(window).on('load', function() {
       ScrollTrigger.refresh();

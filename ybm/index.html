@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <!-- <meta name="description" content="TOEIC, 영어, 중국어까지 외국어 전문 교육" />
+  <meta name="description" content="TOEIC, 영어, 중국어까지 외국어 전문 교육" />
   <meta name="author" content="(주)와이비엠넷" /> 
   <meta name="apple-mobile-web-app-title" content="YBM" />
   <meta property="og:title" content="YBM" />
@@ -13,7 +13,7 @@
 	<meta property="og:locale" content="ko_KR" />
 	<meta property="og:image" content="./img/thumbnail.png" />
 	<meta property="og:type" content="website" />
-  <meta property="og:site_name" content="YBM" /> -->
+  <meta property="og:site_name" content="YBM" />
 
   <title>YBM</title>
   <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
@@ -24,7 +24,7 @@
 
   <script src="./js/jquery_3.5.1.min.js"></script>
   <script src="./js/slick.min.js"></script>
-  <script src="./js/data_load.js"></script>
+  <script src="./js/load_data.js"></script>
   <script src="./js/script_ui.js"></script>
 </head>
 <body class="main">
@@ -37,32 +37,38 @@
   
   <!-- header -->
   <!-- js: 스크롤 발생 시, #header.down -->
-  <header id="header" class="pf">
+  <header id="header">
     <div class="hd_top">
       <div class="inner">
-        <div class="news pa">
-          <h3 class="fl"><a href="#" class="db">NEWS</a></h3>
+        <div class="news">
+          <h3 class="fl"><a href="#">NEWS</a></h3>
           <!-- js: .txt_data 랜덤하게 들어가게 && pc: mouseenter시, article 나오게-->
-          <a href="#" class="txt_news_random db oh"></a>
+          <a href="#" class="txt_news_random"></a>
           <!-- js: mobile: 버튼 눌리면, article 나오게 -->
-          <button class="btn_toggle pa mobile"><span class="txt_blind">주요 뉴스 보기/닫기</span></button>
-          <article class="pf">
+          <button class="btn_toggle mobile"><span class="txt_blind">주요 뉴스 보기/닫기</span></button>
+          <article>
             <h4>YBM NEWS</h4>
             <ul class="news_list">
               <li>
                 <a href="#">
-                  <span class="txt_name">YBM 인강</span>
-                  <span class="txt_data">2월 7일 토익대비 무료특강</span>
+                  <span class="txt_name">인강</span>
+                  <span class="txt_data">5월 9일 토익대비 무료특강</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="txt_name">안내</span>
+                  <span class="txt_data">(주)와이비엠넷 개인정보처리방침 개정</span>
                 </a>
               </li>
             </ul>
-            <a href="#" class="btn_more pa">
+            <a href="#" class="btn_more">
               <span class="pc">more</span>
               <span class="mobile">더보기 +</span>
             </a>
           </article>
         </div>
-        <ul class="util_list pa col pc">
+        <ul class="util_list col pc">
           <li><a href="#">LOGIN</a></li>
           <li><a href="#">JOIN</a></li>
           <li><a href="#">MY 서비스</a></li>
@@ -77,7 +83,7 @@
             </ul>
           </li>
         </ul>
-        <ul class="util_list pa col mobile">
+        <ul class="util_list col mobile">
           <li><a href="#">로그인</a></li>
           <li><a href="#">고객센터</a></li>
         </ul>
@@ -85,12 +91,13 @@
     </div>
     <div class="hd_main">
       <div class="inner">
-        <h1 class="pa"><a href="./index.html" class="db"><span class="txt_blind">YBM 로고</span></a></h1>
-        <a href="#" class="btn_search pa"><span class="txt_blind">통합검색</span></a>
-        <!-- js: 햄버거 버튼 누르면 네비 열리게, #nav.open -->
-        <button class="btn_nav_ham pa"><span class="txt_blind">메뉴 열기</span></button>
-        <nav id="nav" class="pf">
+        <h1><a href="./index.html"><span class="txt_blind">YBM 로고</span></a></h1>
+        <a href="#" class="btn_search"><span class="txt_blind">통합검색</span></a>
+        <!-- js: 햄버거 버튼 누르면, 네비 열리게 #nav.open -->
+        <button class="btn_nav_ham"><span class="txt_blind">메뉴 열기</span></button>
+        <nav id="nav">
           <ul>
+            <!-- js: 메뉴 순서대로 나오게, 애니메이션 추가 -->
             <li class="menu_1"><a href="index.html">HOME</a></li>
             <li class="menu_2"><a href="#">토익/토스 학습</a></li>
             <li class="menu_3"><a href="#">영어학습</a></li>
@@ -106,12 +113,15 @@
               </ul>
             </li>
           </ul>
-          <button class="btn_nav_close pa"><span class="txt_blind">메뉴 닫기</span></button>
+          <!-- js: X 버튼 누르면, 네비 닫히게 -->
+          <button class="btn_nav_close"><span class="txt_blind">메뉴 닫기</span></button>
         </nav>
-        <!-- js: 메인 컨텐츠 영역에 들어서면 타이틀 보이게 html 요소 추가 -->
+        <!-- js: 메인 컨텐츠 영역에 들어서면, 타이틀 보이게 -->
+        <span class="txt_cont_tit txt_center pc"></span>
       </div>
     </div>
-    <!-- js: 네비 열리면, 배경 어두워지게 html 요소 추가 --> 
+    <!-- js: 네비 열리면, 배경 어두워지게 .bg_dimed.on -->
+    <span class="bg_dimed"></span>
   </header>
   <!-- //header -->
 
@@ -195,7 +205,7 @@
       <ul class="inner col">
         <!-- <li>
           <a href="#">
-            <img src="./img/img_story_1.jpg" class="story_img" alt="" />
+            <img src="./img/img_story_01.jpg" alt="" />
             <p class="txt_area">
               <span class="badge_blue">토익스토리</span>
               <span class="tit">TOEIC 수험자들의 최다 질문은?</span>
@@ -207,13 +217,14 @@
 
     <div id="find" class="oh">
       <h2 class="txt_blind">YBM FIND</h2>
-      <a href="#" class="find_ybm fl db">
+      <a href="#" class="find_ybm fl">
         <p class="fr">가까운 YBM어학원 찾기</p>
       </a>
-      <a href="#" class="find_cbt fr db">
+      <a href="#" class="find_cbt fr">
         <p class="fl">토익스피킹 CBT센터 찾기</p>
       </a>
     </div>
+    
     <div id="partner">
       <h2 class="txt_blind">YBM PARTNER(Banner)</h2>
       <ul class="inner">
@@ -232,8 +243,8 @@
       </ul>
     </div>
 
-    <aside id="quickMenu" class="pf">
-      <strong class="tit db">QUICK<br/>MENU</strong>
+    <aside id="quickMenu">
+      <strong class="tit">QUICK<br/>MENU</strong>
       <ul>
         <li><a href="#">학원</a></li>
         <li><a href="#">인강</a></li>
@@ -267,15 +278,15 @@
 var mobile = 768;
 
 //slick 셋팅
-resizeSlickFn($('#visualMenu > ul'));         //#visualMenu 셋팅
-responsiveSlickFn($('#partner > ul.inner'));  //#partner 셋팅
+resizeSlickFn($('#visualMenu > ul'));         //visualMenu 셋팅
+responsiveSlickFn($('#partner > ul.inner'));  //partner 셋팅
 
 $(window).on('resize', function() {
   resizeSlickFn($('#visualMenu > ul'));
 });
 
-//#visualMenu ul: 리사이즈시, 슬릭 셋팅 함수
-function resizeSlickFn($slider) { //#visualMenu > ul
+//visualMenu > ul: 리사이즈시, 슬릭 셋팅 함수
+function resizeSlickFn($slider) { //visualMenu > ul
   if($(window).outerWidth() <= mobile) {
     $slider.not('.slick-initialized').slick({
       slidesToShow: 1,
@@ -291,7 +302,7 @@ function resizeSlickFn($slider) { //#visualMenu > ul
   }
 }
 
-//#partner ul: 반응형 슬릭 셋팅 함수
+//partner > ul: 반응형 슬릭 셋팅 함수
 function responsiveSlickFn($slider) { //#partner > ul
   $slider.slick({
     slidesToShow: 8,

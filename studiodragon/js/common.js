@@ -8,7 +8,6 @@ $(function() {
   init();             //초기화
   settingGNBFn();     //GNB 셋팅 함수
   scrollFn();         //스크롤 셋팅 함수
-  // scrollTriggerFn();  //GSAP scrollTrigger 셋팅
 
   $(window).on('scroll resize', function() {
     scrollFn();
@@ -34,42 +33,13 @@ $(function() {
     $(this).parent().addClass('on');
   });
 
-  // //GSAP scrollTrigger 셋팅 함수
-  // function scrollTriggerFn() {
-  //   //위로 나타나게
-  //   var $selector = $('.scroll_trigger'),
-  //       $selectorChild;
-
-  //   $selector.each(function() {
-  //     $selector = $(this);
-  //     $selectorChild = $selector.find('.scroll_ani_up');
-
-  //     var timeLine = gsap.timeline({
-  //       scrollTrigger: {
-  //         trigger: $selector,
-  //         // start: 'top bottom-=50',
-  //         // end: 'bottom center',
-  //         start: 'top bottom',
-  //         end: '+=350',
-  //         // markers: true,
-  //         scrub: 0.5
-  //       }
-  //     });
-  //     timeLine.from($selectorChild, {autoAlpha: 0, y: 80, ease: 'Power1.easeOut'});
-  //   });
-    
-  //   $(window).on('load', function() {
-  //     ScrollTrigger.refresh();
-  //   });
-  // }
-
   //스크롤 셋팅 함수
   function scrollFn() {
     //헤더 스크롤 이벤트
     checkScrollTopFn($header);
   }
 
-  //#header: 요소가 변경될 스크롤 위치 찾는 함수
+  //header: 요소가 변경될 스크롤 위치 찾는 함수
   function checkScrollTopFn($selector) {  //header
     var trigger = 0;
     if($('body').hasClass('main')) trigger = $('.main_visual').outerHeight() - $selector.outerHeight();
@@ -82,7 +52,7 @@ $(function() {
     }
   }
 
-  //#gnb 셋팅 함수
+  //gnb 셋팅 함수
   function settingGNBFn() {
     var $gnb = $header.find('#gnb'),
         $menu = $gnb.find('.gnb_depth1 > li > a'),
@@ -93,7 +63,6 @@ $(function() {
     checkCurrentMenuFn();
 
     //pc: 네비 열기
-    //*focus, click 등 이벤트는 a링크에 직접주는 것이 좋지만, focusin/focusout: 버블링되므로 li에 이벤트 붙임 > 헤더가 열린상태로 하위 메뉴까지 포커스가 가기위새서
     $menu.parent().on('mouseenter focusin', function() {  //li
       if($(window).outerWidth() <= mobile) return false;  //모바일 미동작
       $header.addClass('open');
@@ -115,7 +84,7 @@ $(function() {
       //메뉴 클릭하면, 하위 메뉴 나오게
       $menu.on('click', function(e) {
         if($(window).outerWidth() <= mobile && $(this).parent().find('ul').length > 0) {
-          e.preventDefault(); //메뉴 클릭될 때, 상단으로 올라가지 않게 기본동작 막음
+          e.preventDefault();
 
           $(this).parent().toggleClass('on'); //li.on > ul {display: block;}
           $(this).parent().siblings().removeClass('on'); 
@@ -134,7 +103,7 @@ $(function() {
     });
   }
 
-  //현재 메뉴에 on 표시하는 함수
+  //현재 페이지 메뉴에 on 표시하는 함수
   function checkCurrentMenuFn() {
     var $gnb = $header.find('#gnb'),
         $menu = $gnb.find('.gnb_depth1 > li > a');

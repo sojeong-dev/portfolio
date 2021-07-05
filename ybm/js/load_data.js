@@ -1,91 +1,146 @@
 $(function() {
   'use strict';
-  console.log('data load');
 
-  var completeData = {};   //json데이터 담는 변수 //전역 변수
-      
-  getLoadDataFn(); 
+  //전역변수
+  var mobile = 768,
+      completeDataC = [], completeDataS = []; //json데이터 담는 변수  
 
+  loadDataFn();
+  
   $(window).on('resize', function() {
-    setResizeUI();
+    settingUIFn();
   });
 
-  function getLoadDataFn() { //json파일을 받아오는 함수
+  //json파일을 받아오는 함수
+  function loadDataFn() {
     $.ajax({
-      url: 'js/data.json',
-      dataType: 'json',
-      success: function(result) { //json파일이 담김
-        // console.log(result);
-        completeData = result.mainContent;
-        // console.log(completeData);
-
-        init();	//데이터 셋팅(초기화)
-        setResizeUI();  //리사이즈시 데이터 style 위치 셋팅
+      url: 'js/data.json',                //서버측 경로
+      dataType: 'json',                   //json 명시
+      success: function(result) { 
+        console.log('data load complete');
+        // console.log(result);           //json파일이 담김 //{curation: Array(13), story: Array(8)}
+        completeDataC = result.curation;  //배열 담음 
+        completeDataS = result.story;
+        // console.log(completeDataC, completeDataS);
+  
+        init(); //데이터 셋팅(초기화)
+        settingUIFn(); //UI 셋팅
       }
-    })
-  }
-
-  function setResizeUI() {
-    if($(window).width() < 768) {
-      setPosUI(10);
-    } else {
-      setPosUI(35);
-    }
-  }
-
-  function setPosUI(spaceLeft) { //데이터 style 위치 셋팅
-    var $contInner = $('#curation > ul.inner'),
-        $contLi = $contInner.children(),  //#curation ul.inner > li
-        innerW = $contInner.outerWidth(),
-        contW = $contLi.outerWidth(),
-        contH = $contLi.outerHeight(true),
-        innerH = 0, colNum = 0, rowNum = 0,
-        arrOffsetLeft = [], arrOffsetTop = [];
-
-    // console.log($contLi);
-    
-    colNum = Math.floor(innerW / contW);
-    rowNum = Math.ceil($contLi.length / colNum);
-    innerH = contH * rowNum;
-    // console.log(innerW + '/' + innerH + '/' + contW + '/' + contH + '/' + colNum + '/' + rowNum);
-
-    for(var i = 0; i < rowNum; i++) {
-      for(var j = 0; j < colNum; j++) {
-        arrOffsetTop.push(i);
-        arrOffsetLeft.push(j);
-      }
-    }
-    // console.log(arrOffsetTop + '/\n' + arrOffsetLeft); 
-
-    $contInner.css({'height': innerH});
-    $contLi.each(function(i) {
-      $(this).css({'top': (contH * arrOffsetTop[i]) + 'px', 'left': (contW * arrOffsetLeft[i] + spaceLeft * arrOffsetLeft[i]) + 'px'});
-    })
-  }
-
-  function init() { //데이터 셋팅 함수
-    // console.log(completeData);
-    $.each(completeData, function(i, item){
-      // console.log(item.img);
-
-      var $curLi = $('<li></li>'),
-          $curA = $('<a href="#"></a>'),
-          $imgArea = $('<p class="img_area"></p>'),
-          $img = $('<img src="' + item.img + '" alt="" />'),
-          $detail = $('<strong class="bg_dimed view_pc"><span class="txt_center">' + item.detail + '</span></strong>'),
-          $txtArea = $('<p class="txt_area"></p>'),
-          $tit = $('<span class="tit">' + item.tit + '</span>'), 
-          $category = $('<span class="category">' + item.category + '</span>');
-
-      $('#curation > .inner').prepend($curLi);  //최신등록순: 가장 마지막에 들어온 데이터가 가장 첫번째 위치하게
-      $curLi.append($curA);
-      $curA.append($imgArea);
-      $imgArea.append($img);
-      $imgArea.append($detail);
-      $curA.append($txtArea);
-      $txtArea.append($tit);
-      $txtArea.append($category);
     });
-        
   }
-});
+
+  //UI 셋팅 함수
+  function settingUIFn() {
+    resizeOffsetFn($('#curation > ul.inner'));  //#curation 셋팅
+    resizeSlickFn($('#story > ul.inner'))    //#story 셋팅
+  }
+
+  //#curation: 리사이즈 시, offset 셋팅 함수 
+  function resizeOffsetFn($cardList) {  //#curation > ul.inner == box
+    var $card = $cardList.children(),  //li == card
+        boxWidth = $cardList.outerWidth(),
+        boxHeight = 0,
+        cardWidth = $card.outerWidth(),
+        cardHeight = $card.outerHeight(true),
+        rowNum = 0, //행
+        colNum = 0, //열
+        arrOffsetTop = [],  //행 좌표
+        arrOffsetLeft = [], //열 좌표
+        marginLeft = 0; //사이 간격
+        
+    //열 갯수: 박스(ul.inner) 너비 / 카드(li) 너비
+    colNum = Math.floor(boxWidth / cardWidth);  
+
+    //행 갯수: 카드(li) 갯수 / 열 갯수
+    rowNum = Math.ceil($card.length / colNum);  
+
+    //카드(li) 행 갯수를 이용하여 박스(ul.inner) 높이 설정
+    //박스(ul.inner) 높이: 카드(li) 높이 X 행 갯수 
+    boxHeight = cardHeight * rowNum;
+
+    //카드(li)의 행과 열을 좌표처럼 이용하여 카드(li) offset(top, left) 지정
+    for(var i = 0; i < rowNum; i++) { //행
+      for(var j = 0; j < colNum; j++) { //열
+        arrOffsetTop.push(i); //행 좌표 추가
+        arrOffsetLeft.push(j);  //열 좌표 추가
+      }
+    }
+    // console.log(arrOffsetTop + '\n' + arrOffsetLeft); 
+
+    //style 적용
+    $cardList.css({'height': boxHeight});
+
+    $(window).outerWidth() > mobile ? marginLeft = 32 : marginLeft = 10;
+    $card.each(function(i){
+      $(this).css({
+        'top': (cardHeight * arrOffsetTop[i]) + 'px',
+        'left': ((cardWidth + marginLeft) * arrOffsetLeft[i]) + 'px'
+      });
+    }); 
+    // console.log(boxWidth + 'x' + boxHeight + '/' + cardWidth + 'x' + cardHeight + '/' + $card.length + '/' + rowNum + 'x' + colNum);
+  }
+
+  //#story: 리사이즈 시, 슬릭 셋팅 함수
+  function resizeSlickFn($slider) { //#story > ul.inner
+    if($(window).outerWidth() <= mobile) {
+      $slider.not('.slick-initialized').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+        centerMode: true,
+        variableWidth: true,
+        arrows: false,
+        infinite: true
+      });
+    } else {
+      $slider.filter('.slick-initialized').slick('unslick');
+      $slider.find('li, a').removeAttr('tabindex role id aria-describedby');
+    }
+  }
+
+  //데이터 셋팅(초기화) 함수
+  function init() {
+    // console.log(completeDataC.length + ',' + completeDataS.length);	
+
+    //#curation
+    $.each(completeDataC, function() { 
+      //파싱 작업: 필요한 데이터 뽑아냄
+      var innerHTML = '\n';
+          innerHTML += '<li>\n';
+          innerHTML += ' <a href="#">\n';
+          innerHTML += '   <p class="img_area">\n';
+          innerHTML += '     <img src="' + this.img + '" alt="" />\n';
+          innerHTML += '     <strong class="detail bg_dimed pc">\n';
+          innerHTML += '       <span class="txt_center">' + this.detail + '</span>\n';
+          innerHTML += '     </strong>\n';
+          innerHTML += '   </p>\n';
+          innerHTML += '   <p class="txt_area">\n';
+          innerHTML += '     <span class="tit">' + this.tit + '</span>\n';
+          innerHTML += '     <span class="category">' + this.category + '</span>\n';
+          innerHTML += '   </p>\n';
+          innerHTML += ' </a>\n';
+          innerHTML += '</li>\n';
+
+      //html 추가
+      $('#curation > .inner').prepend(innerHTML);  //최신등록순: 가장 마지막에 들어온 데이터가 가장 첫번째 위치하게
+    });//each(completeDataC)
+    
+    //#story
+    $.each(completeDataS, function() { 
+      var innerHTML = '\n';
+          innerHTML += '<li>\n';
+          innerHTML += '  <a href="#">\n';
+          innerHTML += '    <img src="' + this.img + '" alt="' + this.detail + '" />\n';
+          innerHTML += '    <p class="txt_area">\n';
+          innerHTML += '      <span class="badge_' + this.badge + '">' + this.category + '</span>\n';
+          innerHTML += '      <span class="tit">' + this.tit + '</span>\n';
+          innerHTML += '    </p>\n';
+          innerHTML += '  </a>\n';
+          innerHTML += '</li>\n';
+
+      //html 추가
+      $('#story > .inner').append(innerHTML);  //오래된등록순: 처음 들어온 데이터 순으로 나열
+    });//each(completeDataS)
+  }
+
+})

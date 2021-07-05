@@ -1,12 +1,12 @@
 $(function() {
   'use strict';
 
-  //전역함수
-  var $header = $('header'),  //*jquery 객체 참조할 시 > 변수 이름 앞에 $를 붙여 표시
+  //전역변수
+  var $header = $('header'),
       mobile = 768;
 
   init();           //초기화
-  settingNavFn();   //Nav 셋팅 함수
+  settingNavFn();   //네비 셋팅 함수
   settingNewsFn();  //뉴스 셋팅 함수
   scrollFn();       //스크롤 셋팅 함수
 
@@ -14,7 +14,7 @@ $(function() {
     scrollFn(); 
   });
 
-  //pc: #visualMenu li 포커스 적용
+  //pc: visualMenu li 포커스 적용
   $('#visualMenu li').on('focusin focusout', function() {
     if($(window).outerWidth() <= mobile) return false; //모바일 미동작
     $(this).toggleClass('focus'); //ie
@@ -22,9 +22,6 @@ $(function() {
 
   //스크롤 맨 위로 이동(부드럽게)
   $('#quickMenu > .btn_scroll_top').on('click', function() {
-    //*$("html").scrollTop(0);	//처음 상단으로 올림
-    //=> scrollTop(): 선택한 요소의 수직위치을 알아내거나 특정값으로 이동시킴
-    //*브라우저마다 $('html'), $('html, body') 잡는 영역 다름 > $('html, body') 권장
     $('html, body').stop().animate({'scrollTop': 0}, 500);	
   });
 
@@ -44,7 +41,7 @@ $(function() {
     checkScrollAmtFn($('.main_content'));
   }
 
-  //#news: 요소가 변경될 스크롤 위치 찾는 함수
+  //header news: 요소가 변경될 스크롤 위치 찾는 함수
   function checkScrollTopFn($selector) {  //$header.find('.news')
     var $triggerElement = $('.main_visual'),
         trigger = $triggerElement.outerHeight() - $header.find('.hd_main').outerHeight();
@@ -60,7 +57,7 @@ $(function() {
     }
   }
   
-  //.main_content: 요소가 들어설 스크롤 범위(amount) 찾는 함수
+  //main_content: 요소가 들어설 스크롤 범위(amount) 찾는 함수
   function checkScrollAmtFn($selector) {  //.main_content
     var $tit = $header.find('.txt_cont_tit'),
         scrollAmt = $(document).scrollTop();
@@ -81,7 +78,7 @@ $(function() {
     });
   }
 
-  //#news 셋팅 함수
+  //header news 셋팅 함수
   function settingNewsFn() {
     var $news = $header.find('.news'),
         $tit = $news.find('.txt_news_random'),
@@ -117,13 +114,7 @@ $(function() {
       $(this).toggleClass('on');
     });
 
-    //뉴스 스크롤 이벤트
-    // checkScrollTopFn($news); 
-    // $(window).on('scroll resize', function() {
-    //   checkScrollTopFn($news); 
-    // });  
-
-    //반응형 전환시 처리(초기화)
+    //반응형 전환 시 처리(초기화)
     $(window).on('resize', function() {
       if($(window).outerWidth() > mobile) {
         $btnToggle.removeClass('on');
@@ -131,7 +122,7 @@ $(function() {
     });
   }
 
-  //#nav 셋팅 함수
+  //nav 셋팅 함수
   function settingNavFn() {
     var $nav = $header.find('#nav'),
         $btnOpen = $nav.prev(),
@@ -173,31 +164,6 @@ $(function() {
     $(document).on('click', 'a[href="#"]', function(e) {  
       e.preventDefault(); 
     });
-
-    //html 요소 추가
-    $header.find('.hd_main > .inner').append('<span class="txt_cont_tit txt_center pc"></span>');
-    $header.append('<span class="bg_dimed"></span>');
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-      
 
 });

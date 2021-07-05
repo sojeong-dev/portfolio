@@ -6,14 +6,14 @@
   font-style: normal;
   font-weight: 400;
   src: local('※'),
-    url(../font/cjBodyRegular.woff) format("woff"); 
+    url(../webfont/cjBodyRegular.woff) format("woff"); 
 }
 @font-face {
   font-family: "cjTitle"; 
   font-style: normal;
   font-weight: 700;
   src: local('※'),
-    url(../font/cjTitle.woff) format("woff"); 
+    url(../webfont/cjTitle.woff) format("woff"); 
 }
 
 /* reset */
@@ -29,6 +29,8 @@ a {color: inherit; text-decoration: inherit;}
 button {padding: 0; border: 0; background-color: transparent; font-family: inherit; cursor: pointer;}
 
 /* default */
+/* html {font-size: 62.5%;}  1rem == 10px */
+/* body {font-size: 1.6rem;} 1.6rem == 16px */
 body {background-color: #fff; font-family: 'cjBody', '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif; line-height: 1.6; word-break: keep-all;} 
 #wrapper {position: relative; width: 100%; /* max-width: 1920px; */ min-width: 320px; margin: 0 auto; overflow: hidden;}
 #skipNav a {z-index: 10000; position: fixed; top: -1000px; left: 0; width: 100%; padding: 10px 0; background-color: #003960; color: #fff; text-align: center;}
@@ -54,10 +56,17 @@ body {background-color: #fff; font-family: 'cjBody', '맑은 고딕', 'malgun go
 
 /* custom */
 .mobile {display: none !important;}
-.txt_blind {z-index: -1; overflow: hidden; position: absolute; /* top: 0; left: 0; */ width: 1px; height: 1px; font-size: 1px;}
+i.fas, i.far, i.fal, i.fad, i.fab {/* position: relative; */ display: inline-block; vertical-align: middle;}
+i.fas span, i.far span, i.fal span,
+.txt_blind {z-index: -1; position: absolute; /* top: 0; left: 0; */ width: 1px; height: 1px; font-size: 1px; overflow: hidden;}
 .txt_center {position: absolute; top: 50%; left: 0; width: 100%; text-align: center; transform: translateY(-50%);}
+.txt_skip {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 .bg_dimed {position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, .65);}
 .scroll_disable {overflow: hidden; touch-action: none;}
+
+/* 구현한 페이지 나타나게 */
+.ok {position: relative;}
+.ok::after {content: ''; z-index: -1; position: absolute; top: 50%; left: 5px; right: 5px; height: 8px; margin-top: -4px; background-color: yellow; opacity: .5;}
 
 /* page common */
 [class^="bg_frame"] {position: absolute; width: 100%; height: 100%;}
@@ -71,7 +80,7 @@ form fieldset {margin: 0; padding: 0; border: none;}
 form select {min-width: 150px; margin-right: 5px; padding-left: 14px; appearance: none; -webkit-appearance: none; -moz-appearance: none; background: #fff url(../img/common/ico_selectbox_arr.png) no-repeat right center;}
 form select::-ms-expand {display:none;}
 form input[type="search"] {width: 195px; padding-left: 11px; border-right: none; margin-right: 40px;}
-form button[type="submit"] {overflow: hidden; position: absolute; top: 0; right: 0; width: 40px; border-left: 0; background: #fff url(../img/common/btn_search.png) no-repeat center center; text-indent: -9999px;}
+form button[type="submit"] {position: absolute; top: 0; right: 0; width: 40px; border-left: 0; background: #fff url(../img/common/btn_search.png) no-repeat center center; text-indent: -9999px; overflow: hidden;}
 
 table {width: 100%; border-top: 2px solid #000;}
 table thead tr th {padding: 23px 20px 24px; border-bottom: 1px solid #d9d9d9; font-weight: 400; color: #666;}

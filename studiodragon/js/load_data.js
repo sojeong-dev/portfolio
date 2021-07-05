@@ -35,22 +35,22 @@ $(function() {
   //더보기 버튼 누르면, 6개씩 추가되게 셋팅 함수
   function settingBtnMoreFn() {
     var $contAll = $tabCont.children(),
-        n = 6,  //default
-        add = 6;
+        getNum = 6,  //default
+        addNum = 6;
 
-    if($tabCont.children().length >= n) {
-      $tabCont.after('<a href="#" class="btn_more db">More</a>'); //더보기 버튼 추가
-      $tabCont.children().eq(n - 1).nextAll().remove();  //최대 6개 출력(default)
+    if($tabCont.children().length >= getNum) {
+      $tabCont.after('<a href="#" class="btn_more">More</a>'); //더보기 버튼 추가
+      $tabCont.children().eq(getNum - 1).nextAll().remove();  //최대 6개 출력(default)
     }
     
     //더보기 버튼 누르면 나머지 추가되게
     $tabCont.next().on('click', function() {
-      for(var i = n; i < n + add; i++) {
+      for(var i = getNum; i < getNum + addNum; i++) {
         $tabCont.append($contAll.eq(i));
       }
-      n += add;
+      getNum += addNum;
 
-      if($contAll.length <= n) //컨텐츠 다 나오면 
+      if($contAll.length <= getNum) //컨텐츠 다 나오면 
         $tabCont.next().remove(); //더보기 버튼 삭제
     });
   }
@@ -59,43 +59,44 @@ $(function() {
   function init() {
     // console.log(completeData.length);
     $.each(completeData, function() {
-      // //파싱 작업
-      // var $workLi = $('<li class="dib pr oh"></li>'),
-      //     $workA = $('<a href="#" class="db"></a>'),
-      //     $badge = $('<span class="badge_onair pa">ON-AIR</span>'),
-      //     $imgArea =  $('<div class="img_area pr"></div>'),
-      //     $img = $('<img src="' + item.img + '" alt="' + item.tit + ' 포스터" />'),
-      //     $detail = $('<div class="detail pa"></div>'),
-      //     $detailInner = $('<span class="txt_tit db">' + item.tit + '</span>' 
-      //                   + '<ul>'
-      //                     + '<li><strong class="txt_name">연출</strong><span>' + item.director + '</span></li>'
-      //                     + '<li><strong class="txt_name">극본</strong><span>' + item.writer + '</span></li>'
-      //                     + '<li><strong class="txt_name">출연</strong><span>' + item.mainCast + '</span></li>'
-      //                   + '</ul>'),
-      //     $workTit = $('<p class="txt_tit">' + item.tit + '</p>');                  
+    // $.each(completeData, function(i, item) { 
+    //   //파싱 작업
+    //   var $workLi = $('<li></li>'),
+    //       $workA = $('<a href="#"></a>'),
+    //       $badge = $('<span class="badge_onair">ON-AIR</span>'),
+    //       $imgArea =  $('<div class="img_area"></div>'),
+    //       $img = $('<img src="' + item.img + '" alt="' + item.tit + ' 포스터" />'),
+    //       $detail = $('<div class="detail"></div>'),
+    //       $detailInner = $('<span class="txt_tit">' + item.tit + '</span>' 
+    //                     + '<ul>'
+    //                       + '<li><strong class="txt_name">연출</strong><span>' + item.director + '</span></li>'
+    //                       + '<li><strong class="txt_name">극본</strong><span>' + item.writer + '</span></li>'
+    //                       + '<li><strong class="txt_name">출연</strong><span>' + item.mainCast + '</span></li>'
+    //                     + '</ul>'),
+    //       $workTit = $('<p class="txt_tit">' + item.tit + '</p>');                  
 
-      // //html 추가
-      // $('.portfolio .tab_conlist').append($workLi); 
-      // $workLi.append($workA);
-      // if(item.state === '방영') $workA.append($badge);
-      // $workA.append($imgArea);
-      // $imgArea.append($img);
-      // $imgArea.append($detail);
-      // $detail.append($detailInner);
-      // $workA.append($workTit);
+    //   //html 추가
+    //   $('.portfolio .tab_conlist').append($workLi); 
+    //   $workLi.append($workA);
+    //   if(item.state === '방영') $workA.append($badge);
+    //   $workA.append($imgArea);
+    //   $imgArea.append($img);
+    //   $imgArea.append($detail);
+    //   $detail.append($detailInner);
+    //   $workA.append($workTit);
 
       //파싱 작업
       var innerHTML = '\n';
-          innerHTML += '<li class="dib pr oh">\n';
-          innerHTML += '  <a href="#" class="db">\n';
+          innerHTML += '<li>\n';
+          innerHTML += '  <a href="#">\n';
 
         if(this.state === '방영')
-          innerHTML += '    <span class="badge_onair pa">ON-AIR</span>\n';
+          innerHTML += '    <span class="badge_onair">ON-AIR</span>\n';
           
-          innerHTML += '    <div class="img_area pr">\n';
+          innerHTML += '    <div class="img_area">\n';
           innerHTML += '      <img src="' + this.img + '" alt="' + this.tit + ' 포스터" />\n';
-          innerHTML += '      <div class="detail pa">\n';
-          innerHTML += '        <span class="txt_tit db">' + this.tit + '</span>\n';
+          innerHTML += '      <div class="detail">\n';
+          innerHTML += '        <span class="txt_tit">' + this.tit + '</span>\n';
           innerHTML += '        <ul>\n';
           innerHTML += '          <li><strong class="txt_name">연출</strong><span>' + this.director + '</span></li>\n';
           innerHTML += '          <li><strong class="txt_name">극본</strong><span>' + this.writer + '</span>\n';

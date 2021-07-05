@@ -16,8 +16,10 @@ a {color: inherit; text-decoration: inherit;}
 button {padding: 0; border: 0; background-color: transparent; font-family: inherit; cursor: pointer;}
 
 /* default */
+/* html {font-size: 62.5%;}  1rem == 10px */
+/* body {font-size: 1.6rem;} 1.6rem == 16px */
 body{background-color: #fff; font-family:/*  '나눔 고딕', 'Nanum Gothic', */ '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif; word-break: keep-all;} 
-#wrapper {overflow: hidden; position: relative; width: 100%; /* max-width: 1920px; */ min-width: 320px; margin: 0 auto;}
+#wrapper {position: relative; width: 100%; /* max-width: 1920px; */ min-width: 320px; margin: 0 auto; overflow: hidden;}
 #skipNav a {z-index: 10000; position: fixed; top: -1000px; left: 0; width: 100%; padding: 4px 0; background-color: #fa3e3e; font-size: 14px; color: #fff; text-align: center;}
 #skipNav a:focus {top: 0;}
 .inner {position: relative; max-width: 1144px; height: 100%; margin: 0 auto;}
@@ -41,9 +43,12 @@ body{background-color: #fff; font-family:/*  '나눔 고딕', 'Nanum Gothic', */
 
 /* custom */
 .mobile {display: none !important;}
-.txt_blind {z-index: -1; overflow: hidden; position: absolute; /* top: 0; left: 0; */ width: 1px; height: 1px; font-size: 1px;}
+i.fas, i.far, i.fal, i.fad, i.fab {/* position: relative; */ display: inline-block; vertical-align: middle;}
+i.fas span, i.far span, i.fal span,
+.txt_blind {z-index: -1; position: absolute; /* top: 0; left: 0; */ width: 1px; height: 1px; font-size: 1px; overflow: hidden;}
 .txt_center {position: absolute; top: 50%; left: 0; width: 100%; text-align: center; transform: translateY(-50%);}
-.bg_dimed {position: absolute; top: 0; right: 0; bottom: 0; left: 0;  background-color: rgba(0, 0, 0, .65);}
+.txt_skip {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.bg_dimed {position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, .65);}
 .scroll_disable {overflow: hidden; touch-action: none;}
 
 @media screen and (max-width: 768px) { /* mobile */
