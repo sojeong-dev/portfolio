@@ -52,7 +52,6 @@ $(function() {
 
       $indicatorMenu.parent().removeClass('on');  //초기화
       $(this).parent().addClass('on');
-      //*animate() 사용할 때, 항상 먼저 stop() 넣어줘야 > 부화가 걸릴 수 있으므로 정확히 stop(true) 넣어줘야
       $('html, body').stop(true).animate({'scrollTop': contOffsetTop + 'px'}, 1000);
     });
   }

@@ -59,32 +59,6 @@ $(function() {
   function init() {
     // console.log(completeData.length);
     $.each(completeData, function() {
-    // $.each(completeData, function(i, item) { 
-    //   //파싱 작업
-    //   var $workLi = $('<li></li>'),
-    //       $workA = $('<a href="#"></a>'),
-    //       $badge = $('<span class="badge_onair">ON-AIR</span>'),
-    //       $imgArea =  $('<div class="img_area"></div>'),
-    //       $img = $('<img src="' + item.img + '" alt="' + item.tit + ' 포스터" />'),
-    //       $detail = $('<div class="detail"></div>'),
-    //       $detailInner = $('<span class="txt_tit">' + item.tit + '</span>' 
-    //                     + '<ul>'
-    //                       + '<li><strong class="txt_name">연출</strong><span>' + item.director + '</span></li>'
-    //                       + '<li><strong class="txt_name">극본</strong><span>' + item.writer + '</span></li>'
-    //                       + '<li><strong class="txt_name">출연</strong><span>' + item.mainCast + '</span></li>'
-    //                     + '</ul>'),
-    //       $workTit = $('<p class="txt_tit">' + item.tit + '</p>');                  
-
-    //   //html 추가
-    //   $('.portfolio .tab_conlist').append($workLi); 
-    //   $workLi.append($workA);
-    //   if(item.state === '방영') $workA.append($badge);
-    //   $workA.append($imgArea);
-    //   $imgArea.append($img);
-    //   $imgArea.append($detail);
-    //   $detail.append($detailInner);
-    //   $workA.append($workTit);
-
       //파싱 작업
       var innerHTML = '\n';
           innerHTML += '<li>\n';
