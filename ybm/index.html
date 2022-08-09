@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="author" content="(주)와이비엠넷">
+  <meta name="description" content="TOEIC, 영어, 중국어까지 외국어 전문 교육" />
+  <meta name="apple-mobile-web-app-title" content="YBM" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="YBM" />
+  <meta property="og:site_name" content="YBM" />
+  <meta property="og:description" content="TOEIC, 영어, 중국어까지 외국어 전문 교육" />
+  <meta property="og:url" content="https://www.ybm.co.kr" />
+  <meta property="og:image" content="./img/thumb.png" />
+
+  <title>[클론코딩] YBM</title>
+  <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="./img/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/ico_android.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="./img/ico_apple.png" />
+  <link rel="stylesheet" type="text/css" href="./fa/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/load_data.js"></script>
+  <script src="./js/ui.js"></script>
+</head>
+<body class="main">
+<div id="wrap">
+  <!-- skipNav -->
+  <div id="skipNav">
+    <a href="#container">본문 바로가기</a>
+  </div>
+  <!-- //skipNav -->
+
+  <!-- header -->
+  <!-- [D] 스크롤 발생 시(메인 비주얼 영역 넘어가면), #header.down -->
+  <header id="header">
+    <div class="header_top">
+      <div class="inner">
+        <div class="news">
+          <h3><a href="#">NEWS</a></h3>
+          <!-- [D] .txt_data 랜덤하게 들어가게 && pc: mouseenter시, article 나오게-->
+          <a href="#" class="txt_news_random">5월 29일 토익대비 무료특강</a>
+          <!-- [D] mobile: .btn_news_toggle 클릭 시, article 나오게(토글) -->
+          <button class="btn_news_toggle mobile"><span class="txt_blind">뉴스 더보기/닫기</span></button>
+          <article>
+            <h4>YBM NEWS</h4>
+            <ul class="news_list">
+              <li>
+                <a href="#">
+                  <span class="txt_tit">인강</span>
+                  <span class="txt_data">5월 29일 토익대비 무료특강</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="txt_tit">안내</span>
+                  <span class="txt_data">(주)와이비엠넷 개인정보처리방침 개정</span>
+                </a>
+              </li>
+            </ul>
+            <a href="#" class="btn_news_more">
+              <span class="pc">more</span>
+              <span class="mobile">더보기 +</span>
+            </a>
+          </article>
+        </div>
+        <ul class="util_list pc">
+          <li><a href="#">LOGIN</a></li>
+          <li><a href="#">JOIN</a></li>
+          <li><a href="#">MY 서비스</a></li>
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#">About YBM</a></li>
+          <li class="lang">
+            <ul>
+              <li><a href="#"><img src="./img/common/ico_lang_kor.png" alt="한국어" /></a></li>
+              <li><a href="#"><img src="./img/common/ico_lang_usa.png" alt="ENGLISH" /></a></li>
+              <li><a href="#"><img src="./img/common/ico_lang_jpn.png" alt="日本" /></a></li>
+              <li><a href="#"><img src="./img/common/ico_lang_chn.png" alt="中文" /></a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="util_list mobile">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+      </div>      
+    </div>
+    <div class="header_main">
+      <div class="inner">
+        <h1 class="logo"><a href="./index.html"><span class="txt_blind">YBM</span></a></h1>
+        <!-- [D] .btn_gnb 클릭 시, 메뉴(#gnb) 열리게 && 뒷 배경 어둡게 -->
+        <button class="btn_gnb"><span class="txt_blind">메뉴 열기</span></button>
+        <nav id="gnb">
+          <ul>
+            <!-- [D] 메뉴 순서대로 나오게, 애니메이션 추가 -->
+            <li class="menu_1"><a href="#">HOME</a></li>
+            <li class="menu_2"><a href="#">토익/토스 학습</a></li>
+            <li class="menu_3"><a href="#">영어학습</a></li>
+            <li class="menu_4"><a href="#">중국어/일어 학습</a></li>
+            <li class="menu_5"><a href="#">취업/커리어</a></li>
+            <li class="menu_6"><a href="#">토익/토익스피킹 접수·성적</a></li>
+            <li class="menu_7"><a href="#">고객센터</a></li>
+            <li class="menu_8"><a href="#">YBM 전체 서비스 보기</a></li>
+            <li class="menu_bottom">
+              <ul>
+                <li><a href="#">YBM KIDS & JUNIOR</a></li>
+                <li><a href="#">YBM B2B</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- [D] .btn_gnb_close 클릭 시, 메뉴(#gnb) 닫히게 -->
+          <button class="btn_gnb_close"><span class="txt_blind">메뉴 닫기</span></button>
+        </nav>
+      </div>
+    </div>
+    <!-- [D] 메인 컨텐츠 영역에 들어서면, 타이틀 보이게 -->
+    <span class="txt_cont_tit txt_center pc"></span>
+    <!-- [D] 메뉴 열리면(#gnb.open), 배경 어두워지게 .bg_dimed.on -->
+    <span class="bg_dimed"></span>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <div id="container">
+    <section id="mainVisual" class="main_visual">
+      <h2 class="txt_blind">주요 메뉴</h2>
+      <!-- [D] mobile: 슬라이더로 변경(슬라이더 플러그인(slick) 삽입) -->
+      <ul>
+        <li class="menu_1">
+          <a href="#">
+            <img class="icon" src="./img/main/ico_visual_1.png" alt="" />
+            <h3>토익/토스 학습</h3>
+            <span>강의, 교재, 인강수강 시험준비의 모든것</span>
+            <p class="more">
+              <img class="pc ico_arr" src="./img/main/ico_visual_more.png" alt="보러 가기" />
+              <span class="mobile">자세히보기</span>
+            </p>
+          </a>
+        </li>
+        <li class="menu_2">
+          <a href="#">
+            <img class="icon" src="./img/main/ico_visual_2.png" alt="" />
+            <h3>영어 학습</h3>
+            <span>기초영어부터 비즈니스 영어까지</span>
+            <p class="more">
+              <img class="pc ico_arr" src="./img/main/ico_visual_more.png" alt="보러 가기" />
+              <span class="mobile">자세히보기</span>
+            </p>
+          </a>
+        </li>
+        <li class="menu_3">
+          <a href="#">
+            <img class="icon" src="./img/main/ico_visual_3.png" alt="" />
+            <h3>중국어/일어 학습</h3>
+            <span>기초회화부터 자격증까지</span>
+            <p class="more">
+              <img class="pc ico_arr" src="./img/main/ico_visual_more.png" alt="보러 가기" />
+              <span class="mobile">자세히보기</span>
+            </p>
+          </a>
+        </li>
+        <li class="menu_4">
+          <a href="#">
+            <img class="icon" src="./img/main/ico_visual_4.png" alt="" />
+            <h3>취업/커리어</h3>
+            <span>실전대비 직무/실무 강의</span>
+            <p class="more">
+              <img class="pc ico_arr" src="./img/main/ico_visual_more.png" alt="보러 가기" />
+              <span class="mobile">자세히보기</span>
+            </p>
+          </a>
+        </li>
+        <li class="menu_5">
+          <a href="#">
+            <img class="icon" src="./img/main/ico_visual_5.png" alt="" />
+            <h3>토익/토익스피킹 접수·성적</h3>
+            <span>어학시험 접수부터 성적확인까지</span>
+            <p class="more">
+              <img class="pc ico_arr" src="./img/main/ico_visual_more.png" alt="보러 가기" />
+              <span class="mobile">자세히보기</span>
+            </p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="curation" class="main_content">
+      <h2>YBM CURATION</h2>
+      <div class="inner">
+        <!-- [D] json 데이터 Ajax로 가져와 파싱(최신 등록순 정렬) -->
+        <ul>
+          <!-- <li>
+            <a href="#">
+              <p class="img_box">
+                <img src="./img/main/curation/2022051295495427.jpg" alt="" />
+                <strong class="detail pc">
+                  <span class="txt_center">수강료 20% 할인</span>
+                </strong>
+              </p>
+              <p class="txt_box">
+                <span class="tit">불라방 디지털 커리어 과정 론칭</span>
+                <span class="category">YBM 어학원</span>
+              </p>
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </section>
+
+    <section id="story" class="main_content">
+      <h2>YBM STORY</h2>
+      <div class="inner">
+        <!-- mobile: 슬라이더로 변경(슬라이더 플러그인(slick) 삽입) -->
+        <ul>
+          <li>
+            <a href="#">
+              <img src="./img/main/img_story_1.jpg" alt="지나간 여름 모두 뒤로, 다가올 가을 향해 할로! 가을 관련 영어 표현" />
+              <p class="txt_box">
+                <span class="category_blue">토익스토리</span>
+                <span class="tit">천고마비는 영어로 ‘High sky and plump horses’! 꼭 알아야 할 가을 관련 영어 표현 모음</span>
+              </p>
+            </a>
+          </li>
+  
+          <li>
+            <a href="#">
+              <img src="./img/main/img_story_2.jpg" alt="닫혔던 해외취업의 문이 활짝! 2021하반기 해외취업 연수생 모집" />
+              <p class="txt_box">
+                <span class="category_blue">토익스토리</span>
+                <span class="tit">해외취업 다시 가능해질까? 연수 비용 최대 80% 지원하는 '해외취업연수사업'</span>
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/main/img_story_3.jpg" alt="갈수록 다양해지는 면접의 세계. 면접 유형별 소개 및 준비법" />
+              <p class="txt_box">
+                <span class="category_blue">토익스토리</span>
+                <span class="tit">AI 면접에 ‘게임’이? 점점 다양해지는 입사 면접, 이렇게 준비하자!</span>
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/main/img_story_4.jpg" alt="환경, 사회, 공정. 변하지 않는 가치를 지키는 ESG경영" />
+              <p class="txt_box">
+                <span class="category_blue">토익스토리</span>
+                <span class="tit">환경 보호, 사회적 가치 중시하는 'ESG 경영'이 대세! 주목받는 직업은?</span>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="find">
+      <div class="inner">
+        <h2 class="txt_blind">YBM FIND</h2>
+        <a href="#" class="left_area">
+          <img class="icon" src="./img/main/ico_find_ybm.png" alt="" />
+          <span>가까운 YBM어학원 찾기</span>
+        </a>
+        <a href="#" class="right_area">
+          <img class="icon" src="./img/main/ico_find_cbt.png" alt="" />
+          <span>토익스피킹 CBT센터</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="partner">
+      <div class="inner">
+        <h2 class="txt_blind">YBM PARTNER</h2>
+        <!-- [D] 1024 이하: 슬라이더로 변경(슬라이더 플러그인(slick) 삽입) -->
+        <ul>
+          <li><a href="#"><img src="./img/main/img_partner_1.jpg" alt="YBM 교원연수" /></a></li>
+          <li><a href="#"><img src="./img/main/img_partner_2.jpg" alt="YBM 유학센터" /></a></li>
+          <li><a href="#"><img src="./img/main/img_partner_3.jpg" alt="YBM 조기유학센터" /></a></li>
+          <li><a href="#"><img src="./img/main/img_partner_4.jpg" alt="YBM 연수원" /></a></li>
+          <li><a href="#"><img src="./img/main/img_partner_5.jpg" alt="YBM the Biz" /></a></li>
+          <li><a href="#"><img src="./img/main/img_partner_6.jpg" alt="YBM English After School" /></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <aside id="quickNav">
+      <strong class="tit">QUICK <br/>MENU</strong>
+      <ul>
+        <li><a href="#">학원</a></li>
+        <li><a href="#">인강</a></li>
+        <li><a href="#">교재</a></li>
+        <li><a href="#">시험</a></li>
+        <li><a href="#">전체보기</a></li>
+      </ul>
+      <!-- [D] .btn_page_top 클릭 시, 페이지 맨 위로(부드럽게) -->
+      <button class="btn_page_top">
+        <img src="./img/common/btn_page_top.png" alt="페이지 맨 위로 이동" />
+        <img src="./img/common/btn_page_top_mo.png" alt="페이지 맨 위로 이동" />
+      </button>
+    </aside>
+  </div>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer id="footer">
+    <p class="license">ETS, the ETS logo, TOEIC and 토익 are registered trademarks of ETS in the United States and other countries, and used under license in the Republic of Korea by YBM.</p>
+    <ul class="info_list">
+      <li><a href="./index.html"><img src="./img/common/img_fooger_ci.png" alt="YBM" /></a></li>
+      <li><a href="#">회사소개</a></li>
+      <li><a href="#">이용약관</a></li>
+      <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+    </ul>
+    <p class="copyright">Copyright ⓒ (주)YBM. All rights reserved.</p>
+  </footer>
+  <!-- //footer -->
+  <p class="non_comm">* 이 페이지는 기존에 있는 사이트를 카피하여 구현하는 방식으로, <br />비상업적인 포트폴리오 용도로 제작하였습니다.</p>
+</div>
+
+<script>
+  'use strict';
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="author" content="(주)더본코리아">
+  <meta name="description" content="더본코리아에 전하고 싶은 불만, 칭찬을 보내주세요." />
+  <meta name="apple-mobile-web-app-title" content="원조쌈밥집" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="원조쌈밥집" />
+  <meta property="og:site_name" content="원조쌈밥집" />
+  <meta property="og:description" content="더본코리아에 전하고 싶은 불만, 칭찬을 보내주세요." />
+  <meta property="og:url" content="https://ssambap.co.kr/" />
+  <meta property="og:image" content="../img/thumb.png" />
+
+  <title>[클론코딩] 고객센터 | 백종원의 원조쌈밥집</title>
+  <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="../img/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../img/ico_android.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../img/ico_apple.png" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Nanum+Myeongjo:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" />
+  <link rel="stylesheet" type="text/css" href="../fa/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/common.js"></script>
+</head>
+<body class="sub customer">
+<div id="wrap">
+  <!-- skipNav -->
+  <div id="skipNav">
+    <a href="#container">본문 바로가기</a>
+  </div>
+  <!-- //skipNav -->
+
+  <!-- header -->
+  <header id="header">
+    <div class="inner">
+      <h1 class="logo"><a href="../index.html"><img src="../img/common/img_header_logo.png" alt="백종원의 元祖쌈밥집" /></a></h1>
+      <!-- [D] .btn_gnb 클릭 시, 메뉴(#gnb) 열리게 && 뒷 배경 어둡게 -->
+      <button class="btn_gnb mo_tablet"><i class="ico_ham"></i><span class="txt_blind">모바일 메뉴 열기</span></button>
+      <nav id="gnb">
+        <h2 class="txt_blind pc">주메뉴</h2>
+        <a href="../index.html" class="img_logo mo_tablet"><img src="../img/common/img_header_logo.png" alt="백종원의 元祖쌈밥집" /></a>
+        <ul>
+          <!-- [D] data-* 속성 사용하여 서브 페이지 연결 | 메뉴 클릭 시, 현재 페이지에 맞는 메뉴 선택되게 li.on -->
+          <li data-menu="story"><a href="../page/story.html">元祖쌈밥집</a></li>
+          <li data-menu="ssam"><a href="../page/ssam.html">쌈이야기</a></li>
+          <li data-menu="menu"><a href="../page/menu.html">메뉴</a></li>
+          <li data-menu="store"><a href="#">매장안내</a></li>
+          <li data-menu="franchise"><a href="#">창업안내</a></li>
+          <li data-menu="customer"><a href="../page/customer.html">고객센터</a></li>
+        </ul>
+        <!-- [D] .btn_gnb_close 클릭 시, 메뉴(#gnb) 닫히게 -->
+        <button class="btn_gnb_close mo_tablet"><i class="ico_close"></i><span class="txt_blind">모바일 메뉴 닫기</span></button>
+      </nav>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <div id="container">
+    <section class="sub_visual">
+      <h2 class="visual_tit">고객센터</h2>
+    </section>
+
+    <section class="content">
+      <div class="cont_tit_area">
+        <h3 class="cont_tit">고객의 소리</h3>
+        <p class="cont_desc">
+          원조쌈밥집에 관해 더본코리아에 전하고 싶은 불만, 칭찬을 보내주세요.
+          <br /> 항상 고객의 소리에 귀 기울이며 고객만족 향샹을 위해 노력하겠습니다.
+        </p>
+      </div>
+
+      <div class="section">
+        <form name="form_inquiry" action="" method="post">
+          <div class="form_input">
+            <div>
+              <strong>브랜드명<span class="required">*</span></strong>
+              <select name="brand" id="brand_select" title="브랜드 선택" required>
+                <option selected>원조 쌈밥집</option>
+              </select>
+            </div>
+            <div>
+              <strong>매장명<span class="required">*</span></strong>
+              <input type="text" name="store" id="store" required />
+              <button class="btn_store_search">매장 찾기</button>
+            </div>
+            <div>
+              <strong>문의유형<span class="required">*</span></strong>
+            </div>
+            <div>
+              <strong>이용경로<span class="required">*</span></strong>
+            </div>
+            <div>
+              <strong>답변 알림 서비스<span class="required">*</span></strong>
+            </div>
+            <div>
+              <strong>성함<span class="required">*</span></strong>
+            </div>
+            <div>
+              <strong>휴대폰<span class="required">*</span></strong>
+            </div>
+             <div>
+              <strong>이메일<span class="required">*</span></strong>
+            </div>
+            <div>
+              <strong>제목<span class="required">*</span></strong>
+            </div>
+            <div>
+              <strong>내용<span class="required">*</span></strong>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- [D] .btn_page_top 클릭 시, 페이지 맨 위로(부드럽게) && 스크롤 발생 시 나타나게 -->
+    <button class="btn_page_top"><img src="../img/common/btn_page_top.png" alt="페이지 맨 위로 이동" /></button>
+  </div>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="inner">
+      <address>
+        <span class="corp">(주)더본코리아</span>
+        <span class="reg_num">사업자등록번호 211-86-00870</span>
+        <span class="ceo">대표이사 백종원</span>
+        <span class="address">주소: 서울시 강남구 봉은사로 1길 39 유성빌딩 5~6층</span>
+        <span class="fax">팩스: 02-511-3864</span>
+        <span class="tel">본사 대표전화 및 가맹상담전화 : 02-549-3864</span>
+        <span class="cs">고객센터: 1544-2360</span>
+      </address>
+      <p class="copyright">COPYRIGHTⓒ 2017 THEBORN KOREA INC. ALL RIGHTS RESERVED</p>
+      <img src="../img/common/img_footer_ci.png" class="ci" alt="더본 코리아 로고 이미지" />
+      <div class="family">
+        <!-- [D] .btn_family_toggle 클릭 시, ul 열리게(토글) -->
+        <button class="btn_family_toggle">패밀리사이트 바로가기<i class="fa-solid fa-caret-down"></i></button>
+        <ul>
+          <li><a href="#">더본코리아 공식홈페이지</a></li>
+          <li><a href="#">창업센터</a></li>
+          <li><a href="#">빽다방</a></li>
+          <li><a href="#">새마을식당</a></li>
+          <li><a href="#">한신포차</a></li>
+          <li><a href="#">역전우동</a></li>
+          <li><a href="#">백스비어</a></li>
+          <li><a href="#">롤링파스타</a></li>
+          <li><a href="#">인생설렁탕</a></li>
+          <li><a href="#">미정국수</a></li>
+          <li><a href="#">리춘시장</a></li>
+          <li><a href="#">돌배기집</a></li>
+          <li><a href="#">백철판</a></li>
+          <li><a href="#">호텔더본</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+  <p class="non_comm">* 이 페이지는 기존에 있는 사이트를 카피하여 구현하는 방식으로, <br />비상업적인 포트폴리오 용도로 제작하였습니다.</p>
+</div>  
+
+<script>
+  'use strict';
+
+</script>
+
+</body>
+</html>

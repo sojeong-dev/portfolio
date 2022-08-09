@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="author" content="(주)더본코리아">
+  <meta name="description" content="20여 가지 신선한 쌈 채소로 즐기는 건강한 한상!" />
+  <meta name="apple-mobile-web-app-title" content="원조쌈밥집" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="원조쌈밥집" />
+  <meta property="og:site_name" content="원조쌈밥집" />
+  <meta property="og:description" content="20여 가지 신선한 쌈 채소로 즐기는 건강한 한상!" />
+  <meta property="og:url" content="https://ssambap.co.kr/" />
+  <meta property="og:image" content="./img/thumb.png" />
+
+  <title>[클론코딩] 백종원의 원조쌈밥집</title>
+  <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="./img/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/ico_android.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="./img/ico_apple.png" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" />
+  <link rel="stylesheet" type="text/css" href="./fa/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/jquery.bxslider.min.js"></script>
+  <script src="./js/common.js"></script>
+</head>
+<body class="main">
+<div id="wrap">
+  <!-- skipNav -->
+  <div id="skipNav">
+    <a href="#container">본문 바로가기</a>
+  </div>
+  <!-- //skipNav -->
+
+  <!-- header -->
+  <header id="header">
+    <div class="inner">
+      <h1 class="logo"><a href="./index.html" class="made_page"><img src="./img/common/img_header_logo.png" alt="백종원의 元祖쌈밥집" /></a></h1>
+      <!-- [D] .btn_gnb 클릭 시, 메뉴(#gnb) 열리게 && 뒷 배경 어둡게 -->
+      <button class="btn_gnb mo_tablet"><i class="ico_ham"></i><span class="txt_blind">모바일 메뉴 열기</span></button>
+      <nav id="gnb">
+        <h2 class="txt_blind pc">주메뉴</h2>
+        <a href="./index.html" class="img_logo mo_tablet made_page"><img src="./img/common/img_header_logo.png" alt="백종원의 元祖쌈밥집" /></a>
+        <ul>
+          <!-- [D] data-* 속성 사용하여 서브 페이지 연결 | 메뉴 클릭 시, 현재 페이지에 맞는 메뉴 선택되게 li.on -->
+          <li data-menu="story"><a href="./page/story.html" class="made_page">元祖쌈밥집</a></li>
+          <li data-menu="ssam"><a href="./page/ssam.html" class="made_page">쌈이야기</a></li>
+          <li data-menu="menu"><a href="./page/menu.html" class="made_page">메뉴</a></li>
+          <li data-menu="store"><a href="#">매장안내</a></li>
+          <li data-menu="franchise"><a href="#">창업안내</a></li>
+          <li data-menu="customer"><a href="#">고객센터</a></li>
+        </ul>
+        <!-- [D] .btn_gnb_close 클릭 시, 메뉴(#gnb) 닫히게 -->
+        <button class="btn_gnb_close mo_tablet"><i class="ico_close"></i><span class="txt_blind">모바일 메뉴 닫기</span></button>
+      </nav>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <div id="container">
+    <div class="section main_visual">
+      <!-- [D] 슬라이더 플러그인(bx-slider) 삽입 -->
+      <ul class="slider">
+        <li class="slide_cont unit_1">
+          <img src="./img/main/img_visual_1.jpg" class="pc_tablet" alt="" />
+          <img src="./img/main/img_visual_1_mo.jpg" class="mobile" alt="" />
+          <div class="inner">
+            <div class="msg_box">
+              <p>20여 가지 신선한 <br />쌈과 대패삼겸살 <br />다양한 반찬이 제공되는 <br />푸짐한 한상!</p>
+              <img class="ico_stamp" src="./img/main/img_stamp.png" alt="도장 이미지" />
+            </div>
+          </div>
+          <div class="slogan">
+            <p>
+              <strong>SINCE 1993</strong>
+              <strong>20여 가지 신선한 채소로 즐기는 건강한 한 상!</strong>
+            </p>
+            <p>원조쌈밥집은 건강하고 푸짐한 쌈밥을 드리기 위해 <br/>항상 노력하고 있습니다.</p>
+          </div>
+        </li>
+        <li class="slide_cont unit_2">
+          <img src="./img/main/img_visual_2.jpg" class="pc_tablet" alt="" />
+          <img src="./img/main/img_visual_2_mo.jpg" class="mobile" alt="" />
+          <div class="inner">
+            <div class="msg_box">
+              <p>건강에 좋은 것이 <br/>자연에도 좋습니다. <br/>인간과 자연을 함께 사랑하는 <br/>원조쌈밥집이 권하는 <br/>건강밥상.</p>
+              <img class="ico_stamp" src="./img/main/img_stamp.png" alt="도장 이미지" />
+          </div>
+          </div>
+          <div class="slogan">
+            <p>
+              <strong>SINCE 1993</strong>
+              <strong>20여 가지 신선한 채소로 즐기는 건강한 한 상!</strong>
+            </p>
+            <p>원조쌈밥집은 건강하고 푸짐한 쌈밥을 드리기 위해 <br/>항상 노력하고 있습니다.</p>
+          </div>
+        </li>
+        <li class="slide_cont unit_3">
+          <img src="./img/main/img_visual_3.jpg" class="pc_tablet" alt="" />
+          <img src="./img/main/img_visual_3_mo.jpg" class="mobile" alt="" />
+          <div class="inner">
+            <div class="msg_box">
+              <p>건강에 좋은 것이 <br/>자연에도 좋습니다. <br/>인간과 자연을 함께 사랑하는 <br/>원조쌈밥집이 권하는 <br/>건강밥상.</p>
+              <img class="ico_stamp" src="./img/main/img_stamp.png" alt="도장 이미지" />
+          </div>
+          </div>
+          <div class="slogan">
+            <p>
+              <strong>SINCE 1993</strong>
+              <strong>20여 가지 신선한 채소로 즐기는 건강한 한 상!</strong>
+            </p>
+            <p>원조쌈밥집은 건강하고 푸짐한 쌈밥을 드리기 위해 <br/>항상 노력하고 있습니다.</p>
+          </div>
+        </li>
+        <li class="slide_cont unit_4">
+          <img src="./img/main/img_visual_4.jpg" class="pc_tablet" alt="" />
+          <img src="./img/main/img_visual_4_mo.jpg" class="mobile" alt="" />
+          <div class="inner">
+            <div class="msg_box">
+              <p>1993년 <br/>오픈부터 현재까지 <br/>건강하고 푸짐한 <br/>쌈밥을 드리기 위해<br/> 항상 노력하고 있습니다.</p>
+              <img class="ico_stamp" src="./img/main/img_stamp.png" alt="도장 이미지" />
+          </div>
+          </div>
+          <div class="slogan">
+            <p>
+              <strong>SINCE 1993</strong>
+              <strong>20여 가지 신선한 채소로 즐기는 건강한 한 상!</strong>
+            </p>
+            <p>원조쌈밥집은 건강하고 푸짐한 쌈밥을 드리기 위해 <br/>항상 노력하고 있습니다.</p>
+          </div>
+        </li>
+      </ul>
+      <!-- <p class="control">
+        <button class="btn_prev"><i class="fa-solid fa-chevron-left"><span>이전 슬라이드</span></i></button>
+        <button class="btn_next"><i class="fa-solid fa-chevron-right"><span>다음 슬라이드</span></i></button>
+      </p> -->
+    </div>
+
+    <div class="section main_content">
+      <div class="inner">
+        <ul>
+          <li class="unit_1">
+            <strong class="tit"><em>원조쌈밥집</em>의 <br /><em>시작</em></strong>  
+            <p>1993년 4월 고객들의 건강과 맛을 모두 만족 시켜 드리기 위한 설렘으로 원조쌈밥집이 첫 발을 내디뎠습니다. 20여 가지의 신선한 각종 쌈과 우연히 발견하게 된 원조쌈밥집의 대패삼겹살로 건강과 행복을 모두 느껴 보시기를 바랍니다.</p>
+            <a href="./page/story.html" class="btn_detail made_page">자세히 보기<i class="fa-solid fa-angle-right"></i></a>
+          </li>
+          <li class="unit_2">
+            <strong class="tit">건강하고 푸짐한 <br /><em>쌈채소</em></strong>
+            <p>쌈을 싸먹는 것은 건강과 소망을 담은 음식이란 의미를 갖는 우리 선인들의 문화입니다. 원조쌈밥집은 신선한 쌈을 푸짐하게 드실 수 있도록 특별히 개발한 쌈채반에 담아 쌈을 제공합니다.</p>
+            <a href="./page/ssam.html" class="btn_detail made_page">자세히 보기<i class="fa-solid fa-angle-right"></i></a>
+          </li>
+          <li class="unit_3">
+            <strong class="tit">원조쌈밥집의 <br /><em>메뉴</em></strong>
+            <p>가장 대표적인 쌈밥정식, 차돌박이와 함께 먹는 차돌쌈밥정식 그리고 원조쌈밥집에서만 맛 볼 수 있는 특제 쌈장인 해물쌈장까지 즐기실 수 있습니다.</p>
+            <a href="./page/menu.html" class="btn_detail made_page">자세히 보기<i class="fa-solid fa-angle-right"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- [D] .btn_page_top 클릭 시, 페이지 맨 위로(부드럽게) && 스크롤 발생 시 나타나게 -->
+    <button class="btn_page_top"><img src="./img/common/btn_page_top.png" alt="페이지 맨 위로 이동" /></button>
+  </div>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="inner">
+      <address>
+        <span class="corp">(주)더본코리아</span>
+        <span class="reg_num">사업자등록번호 211-86-00870</span>
+        <span class="ceo">대표이사 백종원</span>
+        <span class="address">주소: 서울시 강남구 봉은사로 1길 39 유성빌딩 5~6층</span>
+        <span class="fax">팩스: 02-511-3864</span>
+        <span class="tel">본사 대표전화 및 가맹상담전화 : 02-549-3864</span>
+        <span class="cs">고객센터: 1544-2360</span>
+      </address>
+      <p class="copyright">COPYRIGHTⓒ 2017 THEBORN KOREA INC. ALL RIGHTS RESERVED</p>
+      <img src="./img/common/img_footer_ci.png" class="ci" alt="더본 코리아 로고 이미지" />
+      <div class="family">
+        <!-- [D] .btn_family_toggle 클릭 시, ul 열리게(토글) -->
+        <button class="btn_family_toggle">패밀리사이트 바로가기<i class="fa-solid fa-caret-down"></i></button>
+        <ul>
+          <li><a href="#">더본코리아 공식홈페이지</a></li>
+          <li><a href="#">창업센터</a></li>
+          <li><a href="#">빽다방</a></li>
+          <li><a href="#">새마을식당</a></li>
+          <li><a href="#">한신포차</a></li>
+          <li><a href="#">역전우동</a></li>
+          <li><a href="#">백스비어</a></li>
+          <li><a href="#">롤링파스타</a></li>
+          <li><a href="#">인생설렁탕</a></li>
+          <li><a href="#">미정국수</a></li>
+          <li><a href="#">리춘시장</a></li>
+          <li><a href="#">돌배기집</a></li>
+          <li><a href="#">백철판</a></li>
+          <li><a href="#">호텔더본</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+  <p class="non_comm">* 이 페이지는 기존에 있는 사이트를 카피하여 구현하는 방식으로, <br />비상업적인 포트폴리오 용도로 제작하였습니다.</p>
+</div>  
+
+<script>
+  'use strict';
+
+  settingSlider();
+
+  // 슬라이더 셋팅 함수
+  function settingSlider() {
+    // .main_visual .slider에 bx-slider 셋팅
+    $('.main_visual .slider').bxSlider({
+      auto: true,
+      control: true,
+      prevText: '<i class="fa-solid fa-chevron-left"><span>이전 슬라이드</span></i>',
+      nextText: '<i class="fa-solid fa-chevron-right"><span>다음 슬라이드</span></i>',
+      pager: false
+      // keyboardEnabled: true
+    });
+  }
+</script>
+
+</body>
+</html>

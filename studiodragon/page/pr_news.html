@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="author" content="(주)스튜디오드래곤">
+  <meta name="description" content="아시아의 콘텐츠와 라이프 스타일을 선도하는 Asia No.1 Studio 스튜디오 드래곤의 보도자료입니다." />
+  <meta name="apple-mobile-web-app-title" content="스튜디오 드래곤" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="스튜디오 드래곤" />
+  <meta property="og:site_name" content="스튜디오 드래곤" />
+  <meta property="og:description" content="아시아의 콘텐츠와 라이프 스타일을 선도하는 Asia No.1 Studio 스튜디오 드래곤의 보도자료입니다." />
+  <meta property="og:url" content="http://www.studiodragon.net/" />
+  <meta property="og:image" content="../img/thumb.png" />
+
+  <title>[클론코딩] Press Releases | Newsroom | 스튜디오 드래곤</title>
+  <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="../img/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../img/ico_android.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../img/ico_apple.png" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/common.js"></script>
+</head>
+
+<body class="sub pr news">
+<div id="wrap">
+  <!-- skipNav -->
+  <div id="skipNav">
+    <a href="#container">본문 바로가기</a>
+  </div>
+  <!-- //skipNav -->
+
+  <!-- header -->
+  <!-- [D] 스크롤 발생 시, #header.down | pc: 메뉴 열리면, #header.open && 뒷 배경 어둡게 -->
+  <header id="header">
+    <h1 class="logo"><a href="../index.html" class="made_page"><span class="txt_blind">STUDIO DRAGON</span></a></h1>
+    <!-- [D] mobile: .btn_gnb_toggle 클릭 시, 메뉴(#gnb) 열리게(토글) #header.open, #gnb.open && 뒷 배경 어둡게-->
+    <button class="btn_gnb_toggle mo_tablet"><i class="ico_ham"></i><span class="txt_blind">모바일 메뉴 열기/닫기</span></button>
+    <nav id="gnb">
+      <h2 class="txt_blind pc_only">주메뉴</h2>
+      <ul class="gnb_depth_1">
+        <!-- [D] data-* 속성 사용하여 서브 페이지 연결 | 메뉴 클릭 시, 현재 페이지에 맞는 메뉴 선택되게 li.on -->
+        <li data-menu="about">
+          <a href="#">ABOUT<span class="txt_blind mo_tablet">하위 메뉴 열기/닫기</span></a>
+          <ul class="gnb_depth_2">
+            <li data-menu="company"><a href="#">ABOUT US</a></li>
+            <li data-menu="history"><a href="../page/about_history.html" class="made_page">COMPANY HISTORY</a></li>
+            <li data-menu="ethical"><a href="../page/about_ethical.html" class="made_page">ETHICAL MANAGEMENT</a></li>
+            <li data-menu="partner"><a href="#">PARTNERS</a></li>
+            <li data-menu="contact"><a href="../page/about_contact.html" class="made_page">CONTACT US</a></li>
+          </ul>
+        </li>
+        <li data-menu="works">
+          <a href="../page/works_portfolio.html" class="made_page">WORKS<span class="txt_blind mo_tablet">하위 메뉴 열기/닫기</span></a>
+          <ul class="gnb_depth_2">
+            <li data-menu="portfolio"><a href="../page/works_portfolio.html" class="made_page">SHOWS</a></li>
+          </ul>
+        </li>
+        <li data-menu="career">
+          <a href="#">CAREERS<span class="txt_blind mo_tablet">하위 메뉴 열기/닫기</span></a>
+          <ul class="gnb_depth_2">
+            <li data-menu="talent"><a href="#">RECRUITMENT</a></li>
+            <li data-menu="recruit"><a href="#">REATURED JOBS</a></li>
+          </ul>
+        </li>
+        <li data-menu="pr">
+          <a href="../page/pr_notice.html" class="made_page">NEWSROOM<span class="txt_blind mo_tablet">하위 메뉴 열기/닫기</span></a>
+          <ul class="gnb_depth_2">
+            <li data-menu="notice"><a href="../page/pr_notice.html" class="made_page">NOTICE</a></li>
+            <li data-menu="news"><a href="../page/pr_news.html" class="made_page">PRESS RELEASES</a></li>
+          </ul>
+        </li>
+        <li data-menu="ir">
+          <a href="#">IR<span class="txt_blind mo_tablet">하위 메뉴 열기/닫기</span></a>
+          <ul class="gnb_depth_2">
+            <li data-menu="activites"><a href="#">IR ACTIVITES & MATERIALS</a></li>
+            <li data-menu="disclosure"><a href="#">DISCLOSURE</a></li>
+            <li data-menu="notice"><a href="#">PUBLIC NOTICE</a></li>
+            <li data-menu="stock"><a href="#">STOCK INFORMATION</a></li>
+            <li data-menu="finance"><a href="#">FINANCIAL INFORMATION</a></li>
+            <li data-menu="governance"><a href="#">CORPORATE GOVERNANCE</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- [D] 언어 선택되면 li.on -->
+    <ul class="lang_list">
+      <li class="on"><a href="#">KOR</a></li>
+      <li><a href="#">ENG</a></li>
+    </ul>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <div id="container">
+    <section class="sub_visual">
+      <span class="bg_frame_light"></span>
+      <h2 class="visual_tit txt_center">PRESS RELEASES</h2>
+    </section>
+
+    <nav class="breadcrumb">
+      <ul>
+        <li><a href="../index.html" class="made_page"><span class="txt_blind">HOME</span></a></li>
+        <li>NEWSROOM</li>
+        <li>PRESS RELEASES</li>
+      </ul>
+    </nav>
+
+    <section class="content">
+      <div class="section">
+        <h3 class="txt_blind">보도자료</h3>
+        <div class="board_search">
+          <form name="form_search" action="" method="get">
+            <select name="search_select" id="search_select" title="검색 구분 선택">
+              <option value="all" selected>전체</option>
+              <option value="tit">제목</option>
+              <option value="content">내용</option>
+            </select>
+            <input type="text" id="search_keyword" name="search_keyword" title="검색어를 입력하세요" />
+            <input type="image" id="submit" src="../img/common/btn_search.png" alt="검색" />
+          </form>
+        </div>
+
+        <ul class="board_list">
+          <li>
+            <a href="#">
+              <div class="txt_box">
+                <p class="tit">'환혼' 넷플릭스 대한민국 1위, 글로벌 5위! 전세계 홀린 'K판타지'</p>
+                <p class="desc">'환혼'넷플릭스 대한민국1위,글로벌5위!전세계 홀린‘K판타지’(2022-07-07)프리미엄 스...</p>
+                <span class="date">2022.07.07</span>
+              </div>
+              <div class="img_box">
+                <img src="../img/sub/img_news_1.jpg" alt="썸네일 이미지" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="txt_box">
+                <p class="tit">"콘텐츠로 선한 영향력 전파" 콘텐츠 산업 ESG 경영 새 지평 연다</p>
+                <p class="desc">"콘텐츠로 선한 영향력 전파"스튜디오드래곤,콘텐츠 산업ESG경영 새 지평 연다(2022-07...</p>
+                <span class="date">2022.07.06</span>
+              </div>
+              <div class="img_box">
+                <img src="../img/sub/img_news_2.jpg" alt="썸네일 이미지" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="txt_box">
+                <p class="tit">돼지의 왕, 몬트리올 판타지아 필름 페스티벌 상영작 초청! 페스티벌 역사상 드라마 시리즈 최...</p>
+                <p class="desc">스튜디오드래곤 作 돼지의 왕,몬트리올 판타지아 필름 페스티벌 상영작 초청!페스티벌 역사... </p>
+                <span class="date">2022.07.05</span>
+              </div>
+              <div class="img_box">
+                <img src="../img/sub/img_news_3.jpg" alt="썸네일 이미지" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="txt_box">
+                <p class="tit">환혼 '대호국'의 비밀? 경상북도 문경시 폐기물 부지의 '상전벽해'</p>
+                <p class="desc">환혼'대호국'의 비밀?경상북도 문경시 폐기물 부지의'상전벽해'(제공 = 스튜디오드래곤)(2... </p>
+                <span class="date">2022.06.29</span>
+              </div>
+              <div class="img_box">
+                <img src="../img/sub/img_news_4.jpg" alt="썸네일 이미지" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="txt_box">
+                <p class="tit">한국의 휴먼 스토리텔링에 전세계 시청자 몰입 '우리들의 블루스' 월드와이드 TOP10 진입</p>
+                <p class="desc">한국의 휴먼 스토리텔링에 전세계 시청자 몰입'우리들의 블루스'월드와이드TOP10진입제...</p>
+                <span class="date">2022.06.09</span>
+              </div>
+              <div class="img_box">
+                <img src="../img/sub/img_news_5.jpg" alt="썸네일 이미지" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="txt_box">
+                <p class="tit">전세계 160개국 방영된 '별똥별' 글로벌 인기차트 휩쓸었다! VIKI, U-NEXT 1위!</p>
+                <p class="desc">전세계 160개국 방영된 '별똥별' 글로벌 인기차트 휩쓸었다!VIKI 미주, 유럽, 오세아니아...</p>
+                <span class="date">2022.06.08</span>
+              </div>
+              <div class="img_box">
+                <img src="../img/sub/img_news_6.jpg" alt="썸네일 이미지" /> 
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="txt_box">
+                <p class="tit">'더 샌드박스'와 MOU 체결, 프리미엄 IP 활용해 가상세계에 K드라마 공간 구축한다</p>
+                <p class="desc">(사진설명 : (좌) 스튜디오드래곤 김영규 대표, 김제현 대표, 더 샌드박스 Sebastien Borge...</p>
+                <span class="date">2022.05.18</span>
+              </div>
+              <div class="img_box">
+                <img src="../img/sub/img_news_7.jpg" alt="썸네일 이미지" />
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- [D] 리스트가 5개 초과 시 More 버튼 생성 | More 버튼 누르면 나머지 추가되게(5개씩) -->
+        <!-- <button class="btn btn_more">More</button> -->
+      </div>
+    </section>
+  </div>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="footer_top">
+      <div class="inner">
+        <div class="family">
+          <!-- [D] .btn_family_toggle 클릭 시, ul 열리게(토글) -->
+          <button class="btn_family_toggle">Family Site</button>
+          <ul>
+            <li><a href="#">CJ 그룹</a></li>
+            <li><a href="#">CJ ENM</a></li>
+            <li><a href="#">문화 창고</a></li>
+          </ul>
+        </div>
+        <ul class="info_list">
+          <li><a href="#">법적고지</a></li>
+          <li><a href="#">이메일 무단수집 거부</a></li>
+          <li><a href="#">온라인 제보</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li><a href="#">사이트 맵</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div class="inner">
+        <img src="../img/common/img_footer_ci.png" class="ci" alt="STUDIO DRAGON" />
+        <address>
+          <p class="address">서울특별시 마포구 매봉산로 75, 17층 스튜디오 드래곤 주식회사</p>
+          <span class="reg_num">사업자등록번호 : 747-81-00388</span>
+          <span class="ceo">대표자 : 김영규, 김제현</span>
+        </address>
+        <p class="copyright">©2017 <strong>STUDIO DRAGON Corp.</strong> All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+  <!-- [D] mobile: 메뉴 열리면(#header.open, #gnb.open), 배경 어두워지게 .bg_dimed.on -->
+  <span class="bg_dimed"></span>
+  <p class="non_comm">* 이 페이지는 기존에 있는 사이트를 카피하여 구현하는 방식으로, <br />비상업적인 포트폴리오 용도로 제작하였습니다.</p>
+</div>
+
+<script>
+  'use strict';
+  settingAddMore($('.board_list'), $('.board_list').children(), 5);  // 더보기 버튼 셋팅
+</script>
+</body>
+</html>

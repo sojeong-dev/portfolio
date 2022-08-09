@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* common CSS */
+/* 반응형 분기점: pc: 1025 이상 | tablet: 769 ~ 1024 | mobile: 768 이하 */
+
+/**** reset ****/
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, table {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+main {display: block;}
+a {color: inherit; text-decoration: inherit;}
+a img {border: none;}
+img {vertical-align: middle;}
+ol, ul, li {list-style: none;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: separate; border-spacing: 0; table-layout: fixed;}
+table caption {overflow: hidden; width: 1px; height: 1px; margin: -1px; font-size: 1px; text-indent: -9999px;}
+button {padding: 0; border: 0; background-color: transparent; font-family: inherit; cursor: pointer;}
+@media screen and (max-width: 600px) { /* mobile */
+  html {-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; text-size-adjust: 100%;}
+  img {max-width: 100%;}
+}
+
+/**** common ****/
+/* 기본 구조 */
+body {background-color: #fff; font-size: 16px; font-family: 'Noto Sans KR', 'Roboto', '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif; color: #666; word-break: keep-all;}
+#wrap {overflow: hidden; position: relative; max-width: 1920px; min-width: 320px; margin: 0 auto;}
+#skipNav a {position: fixed; top: -50px; left: 0; z-index: 10000; width: 100%; border-bottom: 1px solid #fff; background-color: rgba(0, 0, 0, .75); font-size: 16px; line-height: 40px; color: #fff; text-align: center; transition: top .3s;}
+#skipNav a:focus {top: 0;}
+.inner {margin: 0 auto;}
+
+/* 레이아웃 */
+.pf {position: fixed;}
+.pr {position: relative;}
+.pa {position: absolute;}
+.fl {float: left;}
+.fr {float: right;}
+.clear {clear: both;}
+.oh {overflow: hidden;}
+.db {display: block;}
+.dib {display: inline-block;}
+
+/* 대체 택스트 */
+.txt_blind, .blind {overflow: hidden; position: absolute; top: 0; left: 0; z-index: -1; width: 1px; height: 1px; font-size: 1px;}
+i.fa-solid, i.fas {display: inline-block; vertical-align: middle;}
+i.fa-solid span, i.fas span {overflow: hidden; position: absolute; text-indent: -9999px;}
+
+/* 반응형 */
+.mo_tablet {display: none !important;}
+.mobile {display: none !important;}
+@media screen and (max-width: 1024px) { /* tablet */
+  .pc {display: none !important;}
+  .mo_tablet {display: block !important;}
+}
+@media screen and (max-width: 768px) { /* mobile */
+  .pc_tablet {display: none !important;}
+  .mobile {display: block !important;}
+}
+
+/* 기타 스타일 공통 */
+.bg_dimed {display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 25; background-color: rgba(0, 0, 0, .65);}
+.bg_dimed.on {display: block;}
+.scroll_disable {overflow: hidden; touch-action: none;}
+.center {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.txt_center {position: absolute; top: 50%; left: 0; width: 100%; text-align: center; transform: translateY(-50%);}
+/* .txt_ellipsis {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;} */
+/* .txt_ellipsis_multiple {display: block; display: -webkit-box; overflow: hidden; height: 2.4em; line-height: 1.2em; text-overflow: ellipsis; word-wrap: break-word; -webkit-line-clamp: 2; 라인수 -webkit-box-orient: vertical;} */
+
+/* 비상업용 포트폴리오 명시 */
+.non_comm {position: absolute; left: 10px; bottom: 10px; z-index: 25; padding-left: 8px; font-size: 12px; color: #999; text-indent: -8px; transition: all .5s;}
+.non_comm:hover {background-color: #111; color: #fff;}
+@media screen and (max-width: 1024px) { /* tablet */
+  .non_comm {font-size: 10px;}
+}
+@media screen and (max-width: 768px) { /* mobile */
+  .non_comm > br {display: none;}
+}

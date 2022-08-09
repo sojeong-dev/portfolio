@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="author" content="(주)더본코리아">
+  <meta name="description" content="20여가지 신선한 쌈 채소로 즐기는 건강한 한 상!" />
+  <meta name="apple-mobile-web-app-title" content="원조쌈밥집" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="원조쌈밥집" />
+  <meta property="og:site_name" content="원조쌈밥집" />
+  <meta property="og:description" content="20여가지 신선한 쌈 채소로 즐기는 건강한 한 상!" />
+  <meta property="og:url" content="https://ssambap.co.kr/" />
+  <meta property="og:image" content="../img/thumb.png" />
+
+  <title>[클론코딩] 20 여가지의 쌈 | 백종원의 원조쌈밥집</title>
+  <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="../img/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../img/ico_android.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../img/ico_apple.png" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Nanum+Myeongjo:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" />
+  <link rel="stylesheet" type="text/css" href="../fa/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/common.js"></script>
+</head>
+<body class="sub ssam">
+<div id="wrap">
+  <!-- skipNav -->
+  <div id="skipNav">
+    <a href="#container">본문 바로가기</a>
+  </div>
+  <!-- //skipNav -->
+
+  <!-- header -->
+  <header id="header">
+    <div class="inner">
+      <h1 class="logo"><a href="../index.html" class="made_page"><img src="../img/common/img_header_logo.png" alt="백종원의 元祖쌈밥집" /></a></h1>
+      <!-- [D] .btn_gnb 클릭 시, 메뉴(#gnb) 열리게 && 뒷 배경 어둡게 -->
+      <button class="btn_gnb mo_tablet"><i class="ico_ham"></i><span class="txt_blind">모바일 메뉴 열기</span></button>
+      <nav id="gnb">
+        <h2 class="txt_blind pc">주메뉴</h2>
+        <a href="../index.html" class="img_logo mo_tablet made_page"><img src="../img/common/img_header_logo.png" alt="백종원의 元祖쌈밥집" /></a>
+        <ul>
+          <!-- [D] data-* 속성 사용하여 서브 페이지 연결 | 메뉴 클릭 시, 현재 페이지에 맞는 메뉴 선택되게 li.on -->
+          <li data-menu="story"><a href="../page/story.html" class="made_page">元祖쌈밥집</a></li>
+          <li data-menu="ssam"><a href="../page/ssam.html" class="made_page">쌈이야기</a></li>
+          <li data-menu="menu"><a href="../page/menu.html" class="made_page">메뉴</a></li>
+          <li data-menu="store"><a href="#">매장안내</a></li>
+          <li data-menu="franchise"><a href="#">창업안내</a></li>
+          <li data-menu="customer"><a href="#">고객센터</a></li>
+        </ul>
+        <!-- [D] .btn_gnb_close 클릭 시, 메뉴(#gnb) 닫히게 -->
+        <button class="btn_gnb_close mo_tablet"><i class="ico_close"></i><span class="txt_blind">모바일 메뉴 닫기</span></button>
+      </nav>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <div id="container">
+    <section class="sub_visual">
+      <h2 class="visual_tit">쌈이야기</h2>
+    </section>
+
+    <section class="content">
+      <!-- [D] 탭 메뉴 선택되면 li.on -->
+      <ul class="tab_list">
+        <li><a href="#">쌈밥이란?</a></li>
+        <li class="on"><a href="#">20 여가지의 쌈</a></li>
+      </ul>
+
+      <div class="tab_cont">
+        <div class="cont_tit_area">
+          <h3 class="cont_tit">20여가지의 쌈</h3>
+          <p class="cont_desc">
+            <strong>쌈채소에는 비타민과 무기질 등 건강을 위한 영양소가 가득합니다.</strong>
+            <br /> 원조쌈밥집에서는 신선한 채소에서부터 살짝 데쳐서 더욱 부드러운 숙쌈에 이르기까지
+            <br /> 약 20여 가지의 쌈채소를 제공하고 있습니다.
+            <br /> 다양한 쌈채소의 이름이 무엇인지, 어떤 효능이 있는지 확인하여 보세요.
+          </p>
+        </div>
+
+        <div class="section">
+          <div class="ssam_menu_wrap unit_1">
+            <ul>
+              <li>
+                <img src="../img/sub/img_ssam_1.png" alt="" /> 
+                <h4>상추</h4>
+                <p>철분과 필수 아미노산이 풍부하여 <br />빈혈에 도움을 주며, 진통과 최면 효과가 있습니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_2.png" alt="" /> 
+                <h4>깻잎</h4> 
+                <p>독특한 향이 입맛을 돋구어 주며 <br />철분,비타민,칼슘 등이 풍부해 <br />노화와 감기예방에 효과가 있습니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_3.png" alt="" /> 
+                <h4>적상추</h4> 
+                <p>기분이 좋아지는 안정제 역할을 하고 <br />두통이나 불면증 해소에 좋은 효과를 냅니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_4.png" alt="" /> 
+                <h4>청겨자</h4> 
+                <p>베타카로틴,칼슘,철분 등의 <br />함유량이 높아 류머티즘,신경통,폐렴 증상 완화에 <br /> 도움을 줍니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_5.png" alt="" /> 
+                <h4>청경채</h4> 
+                <p>단맛이 나는 채소로 피부미용,치아,골격의 발육에 좋고 <br />신진대사 기능 촉진 및 세포조직 강화합니다.</p>
+              </li>
+            </ul>
+            <div class="bg_bottom"></div>
+          </div>
+
+          <div class="ssam_menu_wrap unit_2">
+            <ul>
+              <li>
+                <img src="../img/sub/img_ssam_6.png" alt="" /> 
+                <h4>쌈배추</h4>
+                <p>폐암의 예방과 치료에 효과적이며, <br />철분 및 아스코르브산 함량이 높아 동맥경화 및 성인병을 예방합니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_7.png" alt="" /> 
+                <h4>적치커리</h4> 
+                <p>담즙을 증가시키는 작용이 있다고 하여 <br />담석증의 특효약으로 이용하며 소화기능을 개선 합니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_8.png" alt="" /> 
+                <h4>신선초</h4> 
+                <p>약초로 많이 이용하며 비타민,철분,인,칼슘 등이 <br />다량 함유되어있어 빈혈,고혈압 등에 효과가 있습니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_9.png" alt="" /> 
+                <h4>배추</h4> 
+                <p>배추에 들어있는 인은 발암물질이 <br />활성화 되는 것을 억제해 암 예방 효과가 있습니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_10.png" alt="" /> 
+                <h4>치커리</h4> 
+                <p>쌉싸름한 맛을 내는 인티빈 성분이 소화를 촉진하고 <br />혈관계를 강화시켜 변비예방에 도움을 줍니다.</p>
+              </li>
+            </ul>
+            <div class="bg_bottom"></div>
+          </div>
+
+          <div class="ssam_menu_wrap unit_3">
+            <ul>
+              <li>
+                <img src="../img/sub/img_ssam_11.png" alt="" /> 
+                <h4>백로즈</h4>
+                <p>케일과에 속하는 쌈채소로 식용을 돋우거나 <br />장식용 채소로 사용하며 칼슘,철,베타카로틴이 풍부합니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_12.png" alt="" /> 
+                <h4>뉴그린</h4> 
+                <p>다양한 비타민,칼륨,칼슘,인 함유로 <br />녹색채소 중에서도 영양가가 높으며 항암작용 및 <br />간 피로개선에 도움이 됩니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_13.png" alt="" /> 
+                <h4>적로즈</h4> 
+                <p>물감을 뿌린듯한 독특한 색이 있으며 <br />풍부한 비타민C와 칼슘으로 위궤양과 간 질환 치료에 효과적 입니다.</p>
+                <img class="bg_menu" src="../img/sub/bg_ssam_menu_1.jpg" alt="" />
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_14.png" alt="" /> 
+                <h4>샐러리</h4> 
+                <p>쌉싸름한 맛과 특유의 향이 있으며 불면증을 해소하고 <br />피부 건조와 변비치료에 효과가 있습니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_15.png" alt="" /> 
+                <h4>적근대</h4> 
+                <p>성장기 어린이의 골격 형성 및 치아건강에 <br />도움을 주며 염증과 독을 제거하는 효과가 있습니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_16.png" alt="" /> 
+                <h4>곰취</h4> 
+                <p>봄철 입맛을 돋우고 춘곤증을 예방하는데 도움을 주며 <br />혈액순환 개선과 기침,천식에 대한 치료에 탁월한 효과가 있습니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_17.png" alt="" /> 
+                <h4>다시마</h4> 
+                <p>바다의 채소로 불리며 변비에 효과, 지방의 흡수를 방해하는 성분으로 <br />콜레스테롤 수치 완화 및 다이어트에 도움을 줍니다.</p>
+              </li>
+            </ul>
+            <div class="bg_bottom"></div>
+          </div>
+
+          <div class="ssam_menu_wrap unit_4">
+            <ul>
+              <li>
+                <img src="../img/sub/img_ssam_18.png" alt="" /> 
+                <h4>케일</h4>
+                <p>위궤양과 신경통 치료에 효과가 있으며 <br />피를 만들어 주는 조혈작용,빈혈에 좋습니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_19.png" alt="" /> 
+                <h4>양배추</h4> 
+                <p>헬리코박터 파이로리의 활성을 억제함으로써 <br />위궤양에 탁월한 효과가 있으며 <br />피부미용에 도움을 줍니다.</p>
+                <img class="bg_menu" src="../img/sub/bg_ssam_menu_2.jpg" alt="" />
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_20.png" alt="" /> 
+                <h4>쪽파</h4> 
+                <p>비타민C가 풍부하여 감기예방에 효과적, <br />또한 저열량,저지방으로 다이어트에 도움이 됩니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_21.png" alt="" /> 
+                <h4>열무잎</h4> 
+                <p>
+                  여린 무에서 유래한 열무는 비타민A와 C가 풍부하여 혈액의 산성화를 방지합니다. 
+                  <br />또한 인삼에도 들어있는 사포인 성분을 포함하고 있어 <br />혈압을 조절하여 주는 효능이 있습니다.
+                </p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_22.png" alt="" /> 
+                <h4>고추</h4> 
+                <p>특유의 매운맛으로 중독성을 가지고 있으며 <br />지방분해에 효과가 있으며 높은 비타민C로 면역강화에 도움을 줍니다.</p>
+                <img class="bg_menu" src="../img/sub/bg_ssam_menu_3.jpg" alt="" />
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_23.png" alt="" /> 
+                <h4>적겨자</h4> 
+                <p>톡 쏘는 매운맛이 특징으로 비타민A가 풍부하여 <br />눈과 귀를 밝게 하고 마음을 안정시키는 효과가 있습니다.</p>
+              </li>
+              <li>
+                <img src="../img/sub/img_ssam_24.png" alt="" /> 
+                <h4>당근</h4> 
+                <p>비타민A와 카로틴 성분으로 시력개선 효과 및 <br />야맹증에 도움을 주며, 노화방지에 높은 효과가 있습니다.</p>
+              </li>
+            </ul>
+            <div class="bg_bottom"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- [D] .btn_page_top 클릭 시, 페이지 맨 위로(부드럽게) && 스크롤 발생 시 나타나게 -->
+    <button class="btn_page_top"><img src="../img/common/btn_page_top.png" alt="페이지 맨 위로 이동" /></button>
+  </div>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="inner">
+      <address>
+        <span class="corp">(주)더본코리아</span>
+        <span class="reg_num">사업자등록번호 211-86-00870</span>
+        <span class="ceo">대표이사 백종원</span>
+        <span class="address">주소: 서울시 강남구 봉은사로 1길 39 유성빌딩 5~6층</span>
+        <span class="fax">팩스: 02-511-3864</span>
+        <span class="tel">본사 대표전화 및 가맹상담전화 : 02-549-3864</span>
+        <span class="cs">고객센터: 1544-2360</span>
+      </address>
+      <p class="copyright">COPYRIGHTⓒ 2017 THEBORN KOREA INC. ALL RIGHTS RESERVED</p>
+      <img src="../img/common/img_footer_ci.png" class="ci" alt="더본 코리아 로고 이미지" />
+      <div class="family">
+        <!-- [D] .btn_family_toggle 클릭 시, ul 열리게(토글) -->
+        <button class="btn_family_toggle">패밀리사이트 바로가기<i class="fa-solid fa-caret-down"></i></button>
+        <ul>
+          <li><a href="#">더본코리아 공식홈페이지</a></li>
+          <li><a href="#">창업센터</a></li>
+          <li><a href="#">빽다방</a></li>
+          <li><a href="#">새마을식당</a></li>
+          <li><a href="#">한신포차</a></li>
+          <li><a href="#">역전우동</a></li>
+          <li><a href="#">백스비어</a></li>
+          <li><a href="#">롤링파스타</a></li>
+          <li><a href="#">인생설렁탕</a></li>
+          <li><a href="#">미정국수</a></li>
+          <li><a href="#">리춘시장</a></li>
+          <li><a href="#">돌배기집</a></li>
+          <li><a href="#">백철판</a></li>
+          <li><a href="#">호텔더본</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+  <p class="non_comm">* 이 페이지는 기존에 있는 사이트를 카피하여 구현하는 방식으로, <br />비상업적인 포트폴리오 용도로 제작하였습니다.</p>
+</div>  
+
+<script>
+  'use strict';
+
+  checkVisibility();
+
+  // 요소가 보이는 범위 찾는 함수
+  function checkVisibility() {
+    var $element = $('.ssam_menu_wrap li, .bg_bottom');
+    console.log($element)
+
+    checkScrollAmt($element); 
+    // 컨텐츠 스크롤 이벤트
+    $(window).on('scroll resize', function() {
+      checkScrollAmt($element);
+    });
+
+    // 요소가 들어설 스크롤 범위 찾는 함수
+    function checkScrollAmt($selector) { // $element
+      var scrollTop = $(document).scrollTop();
+
+      $selector.each(function() {
+        $selector = $(this);
+        var triggerHook = $(window).outerHeight(), // viewport에 대해 상대적으로 어느 시점에서 보여줄 건지
+            trigger = $selector.offset().top - triggerHook;
+        // console.log(scrollTop + ' / ' + trigger);
+
+        if(trigger < scrollTop) $selector.addClass('show');
+        else $selector.removeClass('show');
+      });
+    }
+  }
+</script>
+
+</body>
+</html>

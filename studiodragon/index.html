@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="author" content="(주)스튜디오드래곤">
+  <meta name="description" content="아시아의 콘텐츠와 라이프스타일을 선도하는 트렌드 리더, 스튜디오 드래곤의 홈페이지에 오신 것을 환영합니다." />
+  <meta name="apple-mobile-web-app-title" content="스튜디오 드래곤" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="스튜디오 드래곤" />
+  <meta property="og:site_name" content="스튜디오 드래곤" />
+  <meta property="og:description" content="아시아의 콘텐츠와 라이프스타일을 선도하는 트렌드 리더, 스튜디오 드래곤의 홈페이지에 오신 것을 환영합니다." />
+  <meta property="og:url" content="http://www.studiodragon.net/" />
+  <meta property="og:image" content="./img/thumb.png" />
+
+  <title>[클론코딩] 스튜디오 드래곤</title>
+  <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="./img/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/ico_android.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="./img/ico_apple.png" />
+  <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/gsap/gsap.min.js"></script>
+  <script src="./js/gsap/ScrollTrigger.min.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/main.js"></script>
+</head>
+
+<body class="main">
+<div id="wrap">
+  <!-- skipNav -->
+  <div id="skipNav">
+    <a href="#container">본문 바로가기</a>
+  </div>
+  <!-- //skipNav -->
+
+  <!-- header -->
+  <!-- [D] 스크롤 발생 시(메인 비주얼 영역 넘어가면), #header.down | pc: 메뉴 열리면, #header.open && 뒷 배경 어둡게 -->
+  <header id="header">
+    <h1 class="logo"><a href="./index.html" class="made_page"><span class="txt_blind">STUDIO DRAGON</span></a></h1>
+    <!-- [D] mobile: .btn_gnb_toggle 클릭 시, 메뉴(#gnb) 열리게(토글) #header.open, #gnb.open && 뒷 배경 어둡게-->
+    <button class="btn_gnb_toggle mo_tablet"><i class="ico_ham"></i><span class="txt_blind">모바일 메뉴 열기/닫기</span></button>
+    <nav id="gnb">
+      <h2 class="txt_blind pc_only">주메뉴</h2>
+      <ul class="gnb_depth_1">
+        <!-- [D] data-* 속성 사용하여 서브 페이지 연결 | 메뉴 클릭 시, 현재 페이지에 맞는 메뉴 선택되게 li.on -->
+        <li data-menu="about">
+          <a href="#">ABOUT<span class="txt_blind mo_tablet">하위 메뉴 열기/닫기</span></a>
+          <ul class="gnb_depth_2">
+            <li data-menu="company"><a href="#">ABOUT US</a></li>
+            <li data-menu="history"><a href="./page/about_history.html" class="made_page">COMPANY HISTORY</a></li>
+            <li data-menu="ethical"><a href="./page/about_ethical.html" class="made_page">ETHICAL MANAGEMENT</a></li>
+            <li data-menu="partner"><a href="#">PARTNERS</a></li>
+            <li data-menu="contact"><a href="./page/about_contact.html" class="made_page">CONTACT US</a></li>
+          </ul>
+        </li>
+        <li data-menu="works">
+          <a href="./page/works_portfolio.html" class="made_page">WORKS<span class="txt_blind mo_tablet">하위 메뉴 열기/닫기</span></a>
+          <ul class="gnb_depth_2">
+            <li data-menu="portfolio"><a href="./page/works_portfolio.html" class="made_page">SHOWS</a></li>
+          </ul>
+        </li>
+        <li data-menu="career">
+          <a href="#">CAREERS<span class="txt_blind mo_tablet">하위 메뉴 열기/닫기</span></a>
+          <ul class="gnb_depth_2">
+            <li data-menu="talent"><a href="#">RECRUITMENT</a></li>
+            <li data-menu="recruit"><a href="#">REATURED JOBS</a></li>
+          </ul>
+        </li>
+        <li data-menu="pr">
+          <a href="./page/pr_notice.html" class="made_page">NEWSROOM<span class="txt_blind mo_tablet">하위 메뉴 열기/닫기</span></a>
+          <ul class="gnb_depth_2">
+            <li data-menu="notice"><a href="./page/pr_notice.html" class="made_page">NOTICE</a></li>
+            <li data-menu="news"><a href="./page/pr_news.html" class="made_page">PRESS RELEASES</a></li>
+          </ul>
+        </li>
+        <li data-menu="ir">
+          <a href="#">IR<span class="txt_blind mo_tablet">하위 메뉴 열기/닫기</span></a>
+          <ul class="gnb_depth_2">
+            <li data-menu="activites"><a href="#">IR ACTIVITES & MATERIALS</a></li>
+            <li data-menu="disclosure"><a href="#">DISCLOSURE</a></li>
+            <li data-menu="notice"><a href="#">PUBLIC NOTICE</a></li>
+            <li data-menu="stock"><a href="#">STOCK INFORMATION</a></li>
+            <li data-menu="finance"><a href="#">FINANCIAL INFORMATION</a></li>
+            <li data-menu="governance"><a href="#">CORPORATE GOVERNANCE</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- [D] 언어 선택되면 li.on -->
+    <ul class="lang_list">
+      <li class="on"><a href="#">KOR</a></li>
+      <li><a href="#">ENG</a></li>
+    </ul>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <div id="container">
+    <!-- [D] 메인비주얼 화면 높이에 맞춰 설정 -->
+    <section id="mainVisual" class="main_visual">
+      <h2 class="txt_blind">HOME</h2>
+      <video autoplay preload="auto" loop muted class="pc_only">
+        <source src="./img/main/video_visual.mp4" />
+      </video>
+      <div class="slogan txt_center">
+        <span class="bg_frame_light"></span>
+        <span class="bg_frame_light"></span>
+        <strong>PREMIUM STORYTELLER GROUP</strong>
+        <p>무궁무진한 이야기로 전세계를 매료시키는 <br class="mobile" />프리미엄 스토리텔러 그룹</p>
+      </div>
+      <p class="ico_scroll">
+        <img class="pc_tablet" src="./img/main/img_visual_scroll.png" alt="Scroll Down" />
+        <img class="mobile" src="./img/main/img_visual_scroll_mo.png" alt="Scroll Down" />
+      </p>
+    </section>
+
+    <section id="onAir" class="main_content">
+      <span class="bg_frame_dark"></span>
+      <h2>ON AIR</h2>
+      <!-- [D] ul의 너비가 뷰포트보다 크면 슬라이더로 변경(슬라이더 플러그인(slick) 삽입) -->
+      <ul>
+        <li class="unit_1">
+          <a href="#">
+            <img src="img/main/img_onair_alchemyofsouls.jpg" alt="드라마 환혼 이미지" />
+          </a>
+          <p class="txt_box">
+            <strong class="tit">환혼</strong>
+            <span class="desc">tvN, Netflix (토, 일) 오후 9:10</span>
+          </p>
+        </li>
+        <li class="unit_2">
+          <a href="#">
+            <img src="img/main/img_onair_eve.jpg" alt="드라마 이브 이미지" />
+          </a>
+          <p class="txt_box">
+            <strong class="tit">이브</strong>
+            <span class="desc">tvN (수, 목) 오후 10:30</span>
+          </p>
+        </li>
+        <li class="unit_3">
+          <a href="#">
+            <img src="img/main/img_onair_link.jpg" alt="드라마 링크 이미지" />
+          </a>
+          <p class="txt_box">
+            <strong class="tit">링크: 먹고 사랑하라, 죽이게</strong>
+            <span class="desc">tvN (월, 화) 오후 10:30</span>
+          </p>
+        </li>
+        <li class="unit_4">
+          <a href="#">
+            <img src="img/main/img_onair_yumicells2.jpg" alt="드라마 유미의 세포들 시즌2 이미지" />
+          </a>
+          <p class="txt_box">
+            <strong class="tit">유미의 세포들 시즌2</strong>
+            <span class="desc">TVING</span>
+          </p>
+        </li>
+      </ul>
+      <!-- [D] 슬라이더(slick) 버튼 옮김 -->
+      <p class="control">
+        <!-- <button class="btn_prev"><span class="txt_blind">이전 슬라이드</span></i></button> -->
+        <!-- <button class="btn_next"><span class="txt_blind">다음 슬라이드</span></i></button> -->
+      </p>
+    </section>
+
+    <section id="works" class="main_content">
+      <span class="bg_frame_dark"></span>
+      <h2>WORKS</h2>
+      <div class="inner">
+        <ul class="left_area">
+          <li>
+            <a href="#">
+              <img src="./img/main/img_works_guardian.jpg" alt="드라마 도깨비 이미지" />
+              <strong class="detail txt_center pc_only">도깨비<span class="txt_blind">자세히 보기</span></strong>
+            </a>
+            <span class="tit">도깨비</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/main/img_works_crownedclown.jpg" alt="드라마 왕이 된 남자 이미지" />
+              <strong class="detail txt_center pc_only">왕이 된 남자<span class="txt_blind">자세히 보기</span></strong>
+            </a>
+            <span class="tit">왕이 된 남자</span>
+          </li>
+        </ul>
+        <ul class="right_area">
+          <li>
+            <a href="#">
+              <img src="./img/main/img_works_stranger.jpg" alt="드라마 비밀의 숲 이미지" />
+              <strong class="detail txt_center pc_only">비밀의 숲<span class="txt_blind">자세히 보기</span></strong>
+            </a>
+            <span class="tit">비밀의 숲</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/main/img_works_mrsunshine.jpg" alt="드라마 미스터 션샤인 이미지" />
+              <strong class="detail txt_center pc_only">미스터 션샤인<span class="txt_blind">자세히 보기</span></strong>
+            </a>
+            <span class="tit">미스터 션샤인</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/main/img_works_lifeonmars.jpg" alt="드라마 라이프 온 마스 이미지" />
+              <strong class="detail txt_center pc_only">라이프 온 마스<span class="txt_blind">자세히 보기</span></strong>
+            </a>
+            <span class="tit">라이프 온 마스</span>
+          </li>
+        </ul>
+      </div>
+      <a href="./page/works_portfolio.html" class="btn btn_more made_page">VIEW MORE</a>
+    </section>
+
+    <section id="issue" class="main_content">
+      <span class="bg_frame_light"></span>
+      <h2 class="txt_blind">ISSUE</h2>
+      <a href="#">
+        <div class="txt_area txt_center">
+          <strong>감독은 있는데 대본이 없다.</strong>
+          <p>작가를 꿈꾸는 이들에게 열려 있는 창작 공간과 기회를 제공합니다.</p>
+        </div>
+      </a>
+    </section>
+
+    <section id="news" class="main_content">
+      <h2>NEWS</h2>
+      <div class="inner">
+        <table class="tbl_board_list">
+          <caption>뉴스 목록</caption>
+          <colgroup>
+            <col />
+            <col class="cell_date" />
+          </colgroup>
+          <thead class="blind">
+            <tr>
+              <th>제목</th>
+              <th>작성일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="cell_tit"><a href="#">"콘텐츠로 선한 영향력 전파" 콘텐츠 산업 ESG 경영 새 지평 연다</a></td>
+              <td class="cell_date">2022.07.06</td>
+            </tr>
+            <tr>
+              <td class="cell_tit"><a href="#">돼지의 왕, 몬트리올 판타지아 필름 페스티벌 상영작 초청! 페스티벌 역사상 드라마 시리즈 최초 상영</a></td>
+              <td class="cell_date">2022.07.05</td>
+            </tr>
+            <tr>
+              <td class="cell_tit"><a href="#">환혼 ‘대호국’의 비밀? 경상북도 문경시 폐기물 부지의 ‘상전벽해’</a></td>
+              <td class="cell_date">2022.06.29</td>
+            </tr>
+            <tr>
+              <td class="cell_tit"><a href="#">한국의 휴먼 스토리텔링에 전세계 시청자 몰입, ‘우리들의 블루스’ 월드와이드 TOP10 진입</a></td>
+              <td class="cell_date">2022.06.09</td>
+            </tr>
+            <tr>
+              <td class="cell_tit"><a href="#">전세계 160개국 방영된 ‘별똥별’ 글로벌 인기차트 휩쓸었다! VIKI, U-NEXT 1위!</a></td>
+              <td class="cell_date">2022.06.08</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <a href="./page/pr_news.html" class="btn btn_more made_page">VIEW MORE</a>
+    </section>
+
+    <!-- [D] 화면 높이 1/2 지나가면 인디케이터 다음으로 변경되게 && section의 첫번째 영역 넘어가면, 마지막 영역 벗어나면 스크롤 발생 -->
+    <aside id="mainPageNav">
+      <!-- [D] 인디케이터 메뉴 클릭하면, li.on(부드럽게 이동) && 각 section으로 이동 -->
+      <ul class="indicator">
+        <li><a href="#mainVisual">HOME</a></li>
+        <li><a href="#onAir">ON AIR</a></li>
+        <li><a href="#works">WORKS</a></li>
+        <li><a href="#issue">ISSUE</a></li>
+        <li><a href="#news">NEWS</a></li>
+      </ul>
+    </aside>
+  </div>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="footer_top">
+      <div class="inner">
+        <div class="family">
+          <!-- [D] .btn_family_toggle 클릭 시, ul 열리게(토글) -->
+          <button class="btn_family_toggle">Family Site</button>
+          <ul>
+            <li><a href="#">CJ 그룹</a></li>
+            <li><a href="#">CJ ENM</a></li>
+            <li><a href="#">문화 창고</a></li>
+          </ul>
+        </div>
+        <ul class="info_list">
+          <li><a href="#">법적고지</a></li>
+          <li><a href="#">이메일 무단수집 거부</a></li>
+          <li><a href="#">온라인 제보</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li><a href="#">사이트 맵</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div class="inner">
+        <img src="./img/common/img_footer_ci.png" class="ci" alt="STUDIO DRAGON" />
+        <address>
+          <p class="address">서울특별시 마포구 매봉산로 75, 17층 스튜디오 드래곤 주식회사</p>
+          <span class="reg_num">사업자등록번호 : 747-81-00388</span>
+          <span class="ceo">대표자 : 김영규, 김제현</span>
+        </address>
+        <p class="copyright">©2017 <strong>STUDIO DRAGON Corp.</strong> All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+  <!-- [D] mobile: 메뉴 열리면(#header.open, #gnb.open), 배경 어두워지게 .bg_dimed.on -->
+  <span class="bg_dimed"></span>
+  <p class="non_comm">* 이 페이지는 기존에 있는 사이트를 카피하여 구현하는 방식으로, <br />비상업적인 포트폴리오 용도로 제작하였습니다.</p>
+</div>
+
+<script>
+  'use strict';
+
+</script>
+
+</body>
+</html>

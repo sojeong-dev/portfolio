@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="author" content="(주)더본코리아">
+  <meta name="description" content="20여가지 신선한 쌈 채소로 즐기는 건강한 한 상!" />
+  <meta name="apple-mobile-web-app-title" content="원조쌈밥집" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="원조쌈밥집" />
+  <meta property="og:site_name" content="원조쌈밥집" />
+  <meta property="og:description" content="20여가지 신선한 쌈 채소로 즐기는 건강한 한 상!" />
+  <meta property="og:url" content="https://ssambap.co.kr/" />
+  <meta property="og:image" content="../img/thumb.png" />
+
+  <title>[클론코딩] 메뉴 | 백종원의 원조쌈밥집</title>
+  <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="../img/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../img/ico_android.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../img/ico_apple.png" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Nanum+Myeongjo:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" />
+  <link rel="stylesheet" type="text/css" href="../fa/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/common.js"></script>
+</head>
+<body class="sub menu">
+<div id="wrap">
+  <!-- skipNav -->
+  <div id="skipNav">
+    <a href="#container">본문 바로가기</a>
+  </div>
+  <!-- //skipNav -->
+
+  <!-- header -->
+  <header id="header">
+    <div class="inner">
+      <h1 class="logo"><a href="../index.html" class="made_page"><img src="../img/common/img_header_logo.png" alt="백종원의 元祖쌈밥집" /></a></h1>
+      <!-- [D] .btn_gnb 클릭 시, 메뉴(#gnb) 열리게 && 뒷 배경 어둡게 -->
+      <button class="btn_gnb mo_tablet"><i class="ico_ham"></i><span class="txt_blind">모바일 메뉴 열기</span></button>
+      <nav id="gnb">
+        <h2 class="txt_blind pc">주메뉴</h2>
+        <a href="../index.html" class="img_logo mo_tablet made_page"><img src="../img/common/img_header_logo.png" alt="백종원의 元祖쌈밥집" /></a>
+        <ul>
+          <!-- [D] data-* 속성 사용하여 서브 페이지 연결 | 메뉴 클릭 시, 현재 페이지에 맞는 메뉴 선택되게 li.on -->
+          <li data-menu="story"><a href="../page/story.html" class="made_page">元祖쌈밥집</a></li>
+          <li data-menu="ssam"><a href="../page/ssam.html" class="made_page">쌈이야기</a></li>
+          <li data-menu="menu"><a href="../page/menu.html" class="made_page">메뉴</a></li>
+          <li data-menu="store"><a href="#">매장안내</a></li>
+          <li data-menu="franchise"><a href="#">창업안내</a></li>
+          <li data-menu="customer"><a href="#">고객센터</a></li>
+        </ul>
+        <!-- [D] .btn_gnb_close 클릭 시, 메뉴(#gnb) 닫히게 -->
+        <button class="btn_gnb_close mo_tablet"><i class="ico_close"></i><span class="txt_blind">모바일 메뉴 닫기</span></button>
+      </nav>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <div id="container">
+    <section class="sub_visual">
+      <h2 class="visual_tit">메뉴</h2>
+    </section>
+
+    <section class="content">
+      <!-- [D] 탭 메뉴 선택되면 li.on && 메뉴에 맞는 컨텐츠 나오게 -->
+      <ul class="tab_list">
+        <li class="on"><a href="#" class="made_load">정식 메뉴</a></li>
+        <li><a href="#" class="made_load">쌈장</a></li>
+        <li><a href="#" class="made_load">추가 메뉴</a></li>
+      </ul>
+
+      <!-- [D] 탭 메뉴에 맞는 컨텐츠 불러오기 -->
+      <div class="tab_cont">
+        <div class="section">
+          <h3 class="txt_blind">정식 메뉴</h3>
+          <ul>
+            <li>
+              <img src="../img/sub/img_menu_1.jpg" alt="" />
+              <div class="txt_box">
+                <strong class="tit">대패삼겹살 쌈밥정식</strong>
+                <p class="desc">많은 쌈을 제공하는데 있어서 테이블의 공간을 최대한 활용하기 위한 연구 끝에 원조쌈밥집 만의 쌈채반을 자체 개발, 특허청 디자인 등록까지 마쳤습니다.</p>
+              </div>
+            </li>
+            <li>
+              <img src="../img/sub/img_menu_2.jpg" alt="" />
+              <div class="txt_box">
+                <strong class="tit">차돌박이 쌈밥정식</strong>
+                <p class="desc">원조쌈밥집의 10여가지 다채로운 쌈채소와 다양한 반찬, 그리고 고소하고 부드러운 차돌박이까지 한 상에 먹을 수 있는 푸짐한 차돌박이정식.</p>
+              </div>
+            </li>
+            <li>
+              <img src="../img/sub/img_menu_3.jpg" alt="" />
+              <div class="txt_box">
+                <strong class="tit">생삼겹살 쌈밥정식</strong>
+                <p class="desc">10여 가지 쌈과 함께 고소한 육질의 얼리지 않은 최고급 생 삽겹살이 만드는 맛있는 한 상!</p>
+              </div>
+            </li>
+            <li>
+              <img src="../img/sub/img_menu_4.jpg" alt="" />
+              <div class="txt_box">
+                <strong class="tit">칼집삼겹살 쌈밥정식</strong>
+                <p class="desc">신선하고 푸짐한 쌈채소에 두툼해서 더욱 맛있는 칼집삼겹살이 제공되는 메뉴.</p>
+              </div>
+            </li>
+            <li>
+              <img src="../img/sub/img_menu_5.jpg" alt="" />
+              <div class="txt_box">
+                <strong class="tit">고추장/간장대패제육</strong>
+                <p class="desc">원조쌈밥집의 대표 메뉴인 대패삼겹살을 각종 야채와 특제 소스로 볶아 신선한 쌈과 함께 즐길 수 있는 메뉴.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 class="txt_blind">쌈장</h3>
+          <ul>
+            <li>
+              <img src="../img/sub/img_menu_ssamjang_1.jpg" alt="" />
+              <div class="txt_box">
+                <strong class="tit">고기쌈장</strong>
+                <p class="desc">잘게 다진 고기를 쌈장과 함께 끓인 풍부한 맛의 쌈장.</p>
+              </div>
+            </li>
+            <li>
+              <img src="../img/sub/img_menu_ssamjang_2.jpg" alt="" />
+              <div class="txt_box">
+                <strong class="tit">해물쌈장</strong>
+                <p class="desc">오징어,조갯살,우렁 등 싱싱한 해물과 각종 야채를 듬뿍 넣어 정성스럽게 끓인 해물쌈장.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 class="txt_blind">추가 메뉴</h3>
+          <ul>
+            <li>
+              <img src="../img/sub/img_menu_add_1.jpg" alt="" />
+              <div class="txt_box">
+                <strong class="tit">대패삼겹살</strong>
+                <p class="desc">얇게 썰어진 삼겹살이 마치 대패로 밀어낸 것과 같이 보여
+                  <br /> 지어진 이름 대패삼겹살!
+                  <br /> 불판에 굽기 전 소스에 대패삼겹살을 넣어 소스를 입힌 뒤,
+                  <br /> 불판에 구워먹는 삼겹살 입니다. 얇기 때문에 질기지 않으며 쌈과 함께 먹기에 딱! 알맞은! 쌈과 최고의 궁합을 이루는 메뉴 입니다.
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="../img/sub/img_menu_add_2.jpg" alt="" />
+              <div class="txt_box">
+                <strong class="tit">냉동삼겹살</strong>
+                <p class="desc">삼겹살을 얼려낸 냉동삼겹살!</p>
+              </div>
+            </li>
+            <li>
+              <img src="../img/sub/img_menu_add_3.jpg" alt="" />
+              <div class="txt_box">
+                <strong class="tit">차돌박이</strong>
+                <p class="desc">소고기 특유의 고소함과 부드러움으로 얇게 썰어 구워먹으면 그야말로 일미인 차돌박이입니다.</p>
+              </div>
+            </li>
+            <li>
+              <img src="../img/sub/img_menu_add_4.jpg" alt="" />
+              <div class="txt_box">
+                <strong class="tit">생삼겹살</strong>
+                <p class="desc">얼리지 않은 생삼겹살! <br />쫄깃함과 담백함을 함께 느낄 수 있는 생삼겹살과 <br />쌈밥을 함께 즐겨보세요.</p>
+              </div>
+            </li>
+            <li>
+              <img src="../img/sub/img_menu_add_5.jpg" alt="" />
+              <div class="txt_box">
+                <strong class="tit">칼집삼겹살</strong>
+                <p class="desc">칼집을 내어 <br />더욱 부드럽고 맛있는 삼겹살</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- [D] .btn_page_top 클릭 시, 페이지 맨 위로(부드럽게) && 스크롤 발생 시 나타나게 -->
+    <button class="btn_page_top"><img src="../img/common/btn_page_top.png" alt="페이지 맨 위로 이동" /></button>
+  </div>
+  <!-- //container -->
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="inner">
+      <address>
+        <span class="corp">(주)더본코리아</span>
+        <span class="reg_num">사업자등록번호 211-86-00870</span>
+        <span class="ceo">대표이사 백종원</span>
+        <span class="address">주소: 서울시 강남구 봉은사로 1길 39 유성빌딩 5~6층</span>
+        <span class="fax">팩스: 02-511-3864</span>
+        <span class="tel">본사 대표전화 및 가맹상담전화 : 02-549-3864</span>
+        <span class="cs">고객센터: 1544-2360</span>
+      </address>
+      <p class="copyright">COPYRIGHTⓒ 2017 THEBORN KOREA INC. ALL RIGHTS RESERVED</p>
+      <img src="../img/common/img_footer_ci.png" class="ci" alt="더본 코리아 로고 이미지" />
+      <div class="family">
+        <!-- [D] .btn_family_toggle 클릭 시, ul 열리게(토글) -->
+        <button class="btn_family_toggle">패밀리사이트 바로가기<i class="fa-solid fa-caret-down"></i></button>
+        <ul>
+          <li><a href="#">더본코리아 공식홈페이지</a></li>
+          <li><a href="#">창업센터</a></li>
+          <li><a href="#">빽다방</a></li>
+          <li><a href="#">새마을식당</a></li>
+          <li><a href="#">한신포차</a></li>
+          <li><a href="#">역전우동</a></li>
+          <li><a href="#">백스비어</a></li>
+          <li><a href="#">롤링파스타</a></li>
+          <li><a href="#">인생설렁탕</a></li>
+          <li><a href="#">미정국수</a></li>
+          <li><a href="#">리춘시장</a></li>
+          <li><a href="#">돌배기집</a></li>
+          <li><a href="#">백철판</a></li>
+          <li><a href="#">호텔더본</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+  <p class="non_comm">* 이 페이지는 기존에 있는 사이트를 카피하여 구현하는 방식으로, <br />비상업적인 포트폴리오 용도로 제작하였습니다.</p>
+</div>  
+
+<script>
+  'use strict';
+  // $('.tab_cont').load('data.html .section', function() {});
+
+  var $tabMenu = $('.tab_list > li > a'),
+      $tabCont = $('.tab_cont'),
+      $section = $tabCont.find('.section'),
+      $currentTabMenu = $('.tab_list > li.on > a'); // 현재 선택 되어 있는 탭 메뉴 // li.on == 정식 메뉴
+
+  $tabCont.empty(); // 초기화
+  loadData();
+
+  // 탭 메뉴 버튼 클릭 이벤트
+  $tabMenu.on('click', function() {
+    $currentTabMenu = $(this);
+    $tabCont.empty(); // 누적되지 않게 초기화
+    loadData();
+  });
+
+  // 탭 메뉴에 맞는 컨텐츠 찾아 매칭시켜 요소 가져오는 함수
+  function loadData() {
+    $section.each(function() {
+      if($currentTabMenu.text() === $(this).find('h3').text()) {
+        // console.log($currentTabMenu.text() + '==' + $(this).find('h3').text());
+        $tabCont.append($(this));
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
