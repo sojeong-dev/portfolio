@@ -2,21 +2,32 @@
 'use strict';
 var mobile = 768; // 전역 변수
 $(function() {
-  preventDefaultA();
-  initFullPage();
+  preventDefaultA(); // 초기화
   // checkVisbility();
+  initFullPage(); // fullPage 셋팅
+  preLoader(); // 로딩 페이지 셋팅
+  
 
   // page 버튼 클릭 이벤트(토글)
   $('.page .btn').on('click', function() {
     $(this).toggleClass('on');
   });
-
-  // 텍스트 애니메이션 순서대로 나오게
-  $('#intro [data-clone]').each(function(i) {
-    // $(this).not($('.name > span')).css({'animation-delay': (1 + (i * 0.1)) + 's'});
-  }); 
-
 });
+
+// 로딩 셋팅 함수
+function preLoader() {
+  
+}
+
+// fullPage.js 사용 함수
+function initFullPage() {
+  $('#fullPage').fullpage({
+    navigation: true,
+    // anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', 'lastPage'],
+    navigationPosition: 'right',
+    navigationTooltips: ['intro', 'portfolio 1', 'portfolio 2', 'portfolio 3','contact'],
+	});
+}
 
 // 요소가 보이는 범위 찾는 함수
 function checkVisbility() {
@@ -44,16 +55,6 @@ function checkVisbility() {
       if(triggerStart <= scrollAmt && scrollAmt < triggerEnd) $selector.addClass('active');
     });
   }
-}
-
-// fullPage.js 사용 함수
-function initFullPage() {
-  $('#fullPage').fullpage({
-    navigation: true,
-    // anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage'],
-    navigationPosition: 'right',
-    navigationTooltips: ['intro', 'portfolio 1', 'portfolio 2', 'portfolio 3','contact'],
-	});
 }
 
 // <a href="#"> 링크 기본 동작 비활성화 함수
