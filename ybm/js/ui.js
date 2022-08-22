@@ -247,7 +247,7 @@ function settingGNB() {
 
     // 메뉴 순서대로 나오게
     $gnb.find('li.menu_bottom').siblings().each(function(i) {
-      // $(this).css({'animation-delay': (i * 0.1) + 's'});
+      // $(this).css({'transition-delay': (i * 0.1) + 's'});
     });
 
     // 모바일 시, 본문 스크롤 차단

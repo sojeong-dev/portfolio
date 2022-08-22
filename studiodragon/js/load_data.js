@@ -25,7 +25,7 @@ $(function() {
   // Ajax를 이용하여 json데이터 파싱, 사용 함수
   function loadDataFn() {
     $.ajax({
-      url: '/js/data.json', // 서버측 경로
+      url: '../js/data.json', // 서버측 경로
       dataType: 'json', // json 명시
       success: function(result) {
         // console.log(result); // json파일이 담김 // {portfolio: Array(17)}
